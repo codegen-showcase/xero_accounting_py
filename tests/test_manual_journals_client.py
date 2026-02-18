@@ -25,14 +25,7 @@ def test_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -48,10 +41,10 @@ def test_create_200_success_required_only() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -126,14 +119,7 @@ async def test_await_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -149,10 +135,10 @@ async def test_await_create_200_success_required_only() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -226,14 +212,7 @@ def test_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -249,10 +228,10 @@ def test_create_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -327,14 +306,7 @@ async def test_await_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -350,10 +322,10 @@ async def test_await_create_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -427,14 +399,7 @@ def test_update_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.update(
         manual_journal_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -451,10 +416,10 @@ def test_update_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -528,14 +493,7 @@ async def test_await_update_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.update(
         manual_journal_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -552,10 +510,10 @@ async def test_await_update_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -628,14 +586,7 @@ def test_update_or_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -651,10 +602,10 @@ def test_update_or_create_200_success_required_only() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -729,14 +680,7 @@ async def test_await_update_or_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -752,10 +696,10 @@ async def test_await_update_or_create_200_success_required_only() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -829,14 +773,7 @@ def test_update_or_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -852,10 +789,10 @@ def test_update_or_create_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -930,14 +867,7 @@ async def test_await_update_or_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         manual_journals=[
@@ -953,10 +883,10 @@ async def test_await_update_or_create_200_success_all_params() -> None:
                     }
                 ],
                 "date": "string",
-                "has_attachments": True,
+                "has_attachments": False,
                 "journal_lines": [
                     {
-                        "account_code": "string",
+                        "account_code": "720",
                         "account_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
                         "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                         "is_blank": False,
@@ -1030,14 +960,7 @@ def test_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.get(
         manual_journal_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -1070,14 +993,7 @@ async def test_await_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.get(
         manual_journal_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -1109,14 +1025,7 @@ def test_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Date ASC",
@@ -1152,14 +1061,7 @@ async def test_await_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Date ASC",
@@ -1194,14 +1096,7 @@ def test_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.manual_journals.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Date ASC",
@@ -1237,14 +1132,7 @@ async def test_await_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.manual_journals.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Date ASC",

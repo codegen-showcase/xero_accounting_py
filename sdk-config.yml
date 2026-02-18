@@ -39,621 +39,549 @@ auths:
     param: oauth
 default_module_structure: path
 modules:
-  - path: accounts
-    operations:
-      - id: createAccount
-        function_name: create
-      - id: deleteAccount
-        function_name: delete
-      - id: getAccount
-        function_name: get
-      - id: getAccounts
-        function_name: list
-      - id: updateAccount
-        function_name: update
-  - path: accounts.attachments
-    operations:
-      - id: createAccountAttachmentByFileName
-        function_name: create_by_filename
-      - id: getAccountAttachmentByFileName
-        function_name: get_by_filename
-      - id: getAccountAttachmentById
-        function_name: get_by_id
-      - id: getAccountAttachments
-        function_name: list
-      - id: updateAccountAttachmentByFileName
-        function_name: update_by_filename
-  - path: bank_transactions
-    operations:
-      - id: createBankTransactions
-        function_name: create
-      - id: getBankTransaction
-        function_name: get
-      - id: getBankTransactions
-        function_name: list
-      - id: updateBankTransaction
-        function_name: update
-      - id: updateOrCreateBankTransactions
-        function_name: update_or_create
-  - path: bank_transactions.attachments
-    operations:
-      - id: createBankTransactionAttachmentByFileName
-        function_name: create_by_filename
-      - id: getBankTransactionAttachmentByFileName
-        function_name: get_by_filename
-      - id: getBankTransactionAttachmentById
-        function_name: get_by_id
-      - id: getBankTransactionAttachments
-        function_name: list
-      - id: updateBankTransactionAttachmentByFileName
-        function_name: update_by_filename
-  - path: bank_transactions.history
-    operations:
-      - id: createBankTransactionHistoryRecord
-        function_name: create_record
-      - id: getBankTransactionsHistory
-        function_name: list
-  - path: bank_transfers
-    operations:
-      - id: createBankTransfer
-        function_name: create
-      - id: getBankTransfer
-        function_name: get
-      - id: getBankTransfers
-        function_name: list
-  - path: bank_transfers.attachments
-    operations:
-      - id: createBankTransferAttachmentByFileName
-        function_name: create_by_filename
-      - id: getBankTransferAttachmentByFileName
-        function_name: get_by_filename
-      - id: getBankTransferAttachmentById
-        function_name: get_by_id
-      - id: getBankTransferAttachments
-        function_name: list
-      - id: updateBankTransferAttachmentByFileName
-        function_name: update_by_filename
-  - path: bank_transfers.history
-    operations:
-      - id: createBankTransferHistoryRecord
-        function_name: create_record
-      - id: getBankTransferHistory
-        function_name: list
-  - path: batch_payments
-    operations:
-      - id: createBatchPayment
-        function_name: create
-      - id: deleteBatchPayment
-        function_name: delete
-      - id: deleteBatchPaymentByUrlParam
-        function_name: update
-      - id: getBatchPayment
-        function_name: get
-      - id: getBatchPayments
-        function_name: list
-  - path: batch_payments.history
-    operations:
-      - id: createBatchPaymentHistoryRecord
-        function_name: create_record
-      - id: getBatchPaymentHistory
-        function_name: list
-  - path: branding_themes
-    operations:
-      - id: getBrandingTheme
-        function_name: get
-      - id: getBrandingThemes
-        function_name: list
-  - path: branding_themes.payment_services
-    operations:
-      - id: createBrandingThemePaymentServices
-        function_name: create
-      - id: getBrandingThemePaymentServices
-        function_name: list
-  - path: budgets
-    operations:
-      - id: getBudget
-        function_name: get
-      - id: getBudgets
-        function_name: list
-  - path: contact_groups
-    operations:
-      - id: createContactGroup
-        function_name: create
-      - id: getContactGroup
-        function_name: get
-      - id: getContactGroups
-        function_name: list
-      - id: updateContactGroup
-        function_name: update
-  - path: contact_groups.contacts
-    operations:
-      - id: createContactGroupContacts
-        function_name: create
-      - id: deleteContactGroupContact
-        function_name: delete
-      - id: deleteContactGroupContacts
-        function_name: delete_all
-  - path: contacts
-    operations:
-      - id: createContacts
-        function_name: create
-      - id: getContact
-        function_name: get
-      - id: getContactByContactNumber
-        function_name: get_by_contact_number
-      - id: getContacts
-        function_name: list
-      - id: updateContact
-        function_name: update
-      - id: updateOrCreateContacts
-        function_name: update_or_create
-  - path: contacts.attachments
-    operations:
-      - id: createContactAttachmentByFileName
-        function_name: create_by_filename
-      - id: getContactAttachmentByFileName
-        function_name: get_by_filename
-      - id: getContactAttachmentById
-        function_name: get_by_id
-      - id: getContactAttachments
-        function_name: list
-      - id: updateContactAttachmentByFileName
-        function_name: update_by_filename
-  - path: contacts.cis_settings
-    operations:
-      - id: getContactCISSettings
-        function_name: list
-  - path: contacts.history
-    operations:
-      - id: createContactHistory
-        function_name: create
-      - id: getContactHistory
-        function_name: list
-  - path: credit_notes
-    operations:
-      - id: createCreditNotes
-        function_name: create
-      - id: getCreditNote
-        function_name: get
-      - id: getCreditNotes
-        function_name: list
-      - id: updateCreditNote
-        function_name: update
-      - id: updateOrCreateCreditNotes
-        function_name: update_or_create
-  - path: credit_notes.allocations
-    operations:
-      - id: createCreditNoteAllocation
-        function_name: create
-      - id: deleteCreditNoteAllocations
-        function_name: delete
-  - path: credit_notes.attachments
-    operations:
-      - id: createCreditNoteAttachmentByFileName
-        function_name: create_by_filename
-      - id: getCreditNoteAttachmentByFileName
-        function_name: get_by_filename
-      - id: getCreditNoteAttachmentById
-        function_name: get_by_id
-      - id: getCreditNoteAttachments
-        function_name: list
-      - id: updateCreditNoteAttachmentByFileName
-        function_name: update_by_filename
-  - path: credit_notes.history
-    operations:
-      - id: createCreditNoteHistory
-        function_name: create_record
-      - id: getCreditNoteHistory
-        function_name: list
-  - path: credit_notes.pdf
-    operations:
-      - id: getCreditNoteAsPdf
-        function_name: get
-  - path: currencies
-    operations:
-      - id: createCurrency
-        function_name: create
-      - id: getCurrencies
-        function_name: list
-  - path: employees
-    operations:
-      - id: createEmployees
-        function_name: create
-      - id: getEmployee
-        function_name: get
-      - id: getEmployees
-        function_name: list
-      - id: updateOrCreateEmployees
-        function_name: update_or_create
-  - path: expense_claims
-    operations:
-      - id: createExpenseClaims
-        function_name: create
-      - id: getExpenseClaim
-        function_name: get
-      - id: getExpenseClaims
-        function_name: list
-      - id: updateExpenseClaim
-        function_name: update
-  - path: expense_claims.history
-    operations:
-      - id: createExpenseClaimHistory
-        function_name: create_record
-      - id: getExpenseClaimHistory
-        function_name: list
-  - path: invoice_reminders.settings
-    operations:
-      - id: getInvoiceReminders
-        function_name: list
-  - path: invoices
-    operations:
-      - id: createInvoices
-        function_name: create
-      - id: getInvoice
-        function_name: get
-      - id: getInvoices
-        function_name: list
-      - id: updateInvoice
-        function_name: update
-      - id: updateOrCreateInvoices
-        function_name: update_or_create
-  - path: invoices.attachments
-    operations:
-      - id: createInvoiceAttachmentByFileName
-        function_name: create_by_filename
-      - id: getInvoiceAttachmentByFileName
-        function_name: get_by_filename
-      - id: getInvoiceAttachmentById
-        function_name: get_by_id
-      - id: getInvoiceAttachments
-        function_name: list
-      - id: updateInvoiceAttachmentByFileName
-        function_name: update_by_filename
-  - path: invoices.email
-    operations:
-      - id: emailInvoice
-        function_name: send
-  - path: invoices.history
-    operations:
-      - id: createInvoiceHistory
-        function_name: create_record
-      - id: getInvoiceHistory
-        function_name: list
-  - path: invoices.online_invoice
-    operations:
-      - id: getOnlineInvoice
-        function_name: get
-  - path: invoices.pdf
-    operations:
-      - id: getInvoiceAsPdf
-        function_name: get
-  - path: items
-    operations:
-      - id: createItems
-        function_name: create
-      - id: deleteItem
-        function_name: delete
-      - id: getItem
-        function_name: get
-      - id: getItems
-        function_name: list
-      - id: updateItem
-        function_name: update
-      - id: updateOrCreateItems
-        function_name: update_or_create
-  - path: items.history
-    operations:
-      - id: createItemHistory
-        function_name: create_record
-      - id: getItemHistory
-        function_name: list
-  - path: journals
-    operations:
-      - id: getJournal
-        function_name: get
-      - id: getJournalByNumber
-        function_name: get_by_number
-      - id: getJournals
-        function_name: list
-  - path: linked_transactions
-    operations:
-      - id: createLinkedTransaction
-        function_name: create
-      - id: deleteLinkedTransaction
-        function_name: delete
-      - id: getLinkedTransaction
-        function_name: get
-      - id: getLinkedTransactions
-        function_name: list
-      - id: updateLinkedTransaction
-        function_name: update
-  - path: manual_journals
-    operations:
-      - id: createManualJournals
-        function_name: create
-      - id: getManualJournal
-        function_name: get
-      - id: getManualJournals
-        function_name: list
-      - id: updateManualJournal
-        function_name: update
-      - id: updateOrCreateManualJournals
-        function_name: update_or_create
-  - path: manual_journals.attachments
-    operations:
-      - id: createManualJournalAttachmentByFileName
-        function_name: create_by_filename
-      - id: getManualJournalAttachmentByFileName
-        function_name: get_by_filename
-      - id: getManualJournalAttachmentById
-        function_name: get_by_id
-      - id: getManualJournalAttachments
-        function_name: list
-      - id: updateManualJournalAttachmentByFileName
-        function_name: update_by_filename
-  - path: manual_journals.history
-    operations:
-      - id: createManualJournalHistoryRecord
-        function_name: create_record
-      - id: getManualJournalsHistory
-        function_name: list
-  - path: organisation
-    operations:
-      - id: getOrganisations
-        function_name: list
-  - path: organisation.actions
-    operations:
-      - id: getOrganisationActions
-        function_name: list
-  - path: organisation.cis_settings
-    operations:
-      - id: getOrganisationCISSettings
-        function_name: list
-  - path: overpayments
-    operations:
-      - id: getOverpayment
-        function_name: get
-      - id: getOverpayments
-        function_name: list
-  - path: overpayments.allocations
-    operations:
-      - id: createOverpaymentAllocations
-        function_name: create
-      - id: deleteOverpaymentAllocations
-        function_name: delete
-  - path: overpayments.history
-    operations:
-      - id: createOverpaymentHistory
-        function_name: create_record
-      - id: getOverpaymentHistory
-        function_name: list
-  - path: payment_services
-    operations:
-      - id: createPaymentService
-        function_name: create
-      - id: getPaymentServices
-        function_name: list
-  - path: payments
-    operations:
-      - id: createPayment
-        function_name: create
-      - id: createPayments
-        function_name: create
-      - id: deletePayment
-        function_name: delete
-      - id: getPayment
-        function_name: get
-      - id: getPayments
-        function_name: list
-  - path: payments.history
-    operations:
-      - id: createPaymentHistory
-        function_name: create_record
-      - id: getPaymentHistory
-        function_name: list
-  - path: prepayments
-    operations:
-      - id: getPrepayment
-        function_name: get
-      - id: getPrepayments
-        function_name: list
-  - path: prepayments.allocations
-    operations:
-      - id: createPrepaymentAllocations
-        function_name: create
-      - id: deletePrepaymentAllocations
-        function_name: delete
-  - path: prepayments.history
-    operations:
-      - id: createPrepaymentHistory
-        function_name: create_record
-      - id: getPrepaymentHistory
-        function_name: list
-  - path: purchase_orders
-    operations:
-      - id: createPurchaseOrders
-        function_name: create
-      - id: getPurchaseOrder
-        function_name: get
-      - id: getPurchaseOrderByNumber
-        function_name: get_by_number
-      - id: getPurchaseOrders
-        function_name: list
-      - id: updateOrCreatePurchaseOrders
-        function_name: update_or_create
-      - id: updatePurchaseOrder
-        function_name: update
-  - path: purchase_orders.attachments
-    operations:
-      - id: createPurchaseOrderAttachmentByFileName
-        function_name: create_by_filename
-      - id: getPurchaseOrderAttachmentByFileName
-        function_name: get_by_filename
-      - id: getPurchaseOrderAttachmentById
-        function_name: get_by_id
-      - id: getPurchaseOrderAttachments
-        function_name: list
-      - id: updatePurchaseOrderAttachmentByFileName
-        function_name: update_by_filename
-      - id: getPurchaseOrderAsPdf
-        function_name: get_as_pdf
-  - path: purchase_orders.history
-    operations:
-      - id: createPurchaseOrderHistory
-        function_name: create_record
-      - id: getPurchaseOrderHistory
-        function_name: list
-  - path: quotes
-    operations:
-      - id: createQuotes
-        function_name: create
-      - id: getQuote
-        function_name: get
-      - id: getQuotes
-        function_name: list
-      - id: updateOrCreateQuotes
-        function_name: update_or_create
-      - id: updateQuote
-        function_name: update
-      - id: getQuoteAsPdf
-        function_name: get_as_pdf
-  - path: quotes.attachments
-    operations:
-      - id: createQuoteAttachmentByFileName
-        function_name: create_by_filename
-      - id: getQuoteAttachmentByFileName
-        function_name: get_by_filename
-      - id: getQuoteAttachmentById
-        function_name: get_by_id
-      - id: getQuoteAttachments
-        function_name: list
-      - id: updateQuoteAttachmentByFileName
-        function_name: update_by_filename
-  - path: quotes.history
-    operations:
-      - id: createQuoteHistory
-        function_name: create_record
-      - id: getQuoteHistory
-        function_name: list
-  - path: receipts
-    operations:
-      - id: createReceipt
-        function_name: create
-      - id: getReceipt
-        function_name: get
-      - id: getReceipts
-        function_name: list
-      - id: updateReceipt
-        function_name: update
-  - path: receipts.attachments
-    operations:
-      - id: createReceiptAttachmentByFileName
-        function_name: create_by_filename
-      - id: getReceiptAttachmentByFileName
-        function_name: get_by_filename
-      - id: getReceiptAttachmentById
-        function_name: get_by_id
-      - id: getReceiptAttachments
-        function_name: list
-      - id: updateReceiptAttachmentByFileName
-        function_name: update_by_filename
-  - path: receipts.history
-    operations:
-      - id: createReceiptHistory
-        function_name: create_record
-      - id: getReceiptHistory
-        function_name: list
-  - path: repeating_invoices
-    operations:
-      - id: createRepeatingInvoices
-        function_name: create
-      - id: getRepeatingInvoice
-        function_name: get
-      - id: getRepeatingInvoices
-        function_name: list
-      - id: updateOrCreateRepeatingInvoices
-        function_name: update_or_create
-      - id: updateRepeatingInvoice
-        function_name: update
-  - path: repeating_invoices.attachments
-    operations:
-      - id: createRepeatingInvoiceAttachmentByFileName
-        function_name: create_by_filename
-      - id: getRepeatingInvoiceAttachmentByFileName
-        function_name: get_by_filename
-      - id: getRepeatingInvoiceAttachmentById
-        function_name: get_by_id
-      - id: getRepeatingInvoiceAttachments
-        function_name: list
-      - id: updateRepeatingInvoiceAttachmentByFileName
-        function_name: update_by_filename
-  - path: repeating_invoices.history
-    operations:
-      - id: createRepeatingInvoiceHistory
-        function_name: create_record
-      - id: getRepeatingInvoiceHistory
-        function_name: list
-  - path: reports
-    operations:
-      - id: getReportFromId
-        function_name: get
-      - id: getReportsList
-        function_name: list
-      - id: getReportAgedPayablesByContact
-        function_name: get_aged_payables_by_contact
-      - id: getReportAgedReceivablesByContact
-        function_name: get_aged_receivables_by_contact
-      - id: getReportBalanceSheet
-        function_name: get_balance_sheet
-      - id: getReportBankSummary
-        function_name: get_bank_summary
-      - id: getReportBudgetSummary
-        function_name: get_budget_summary
-      - id: getReportExecutiveSummary
-        function_name: get_executive_summary
-      - id: getReportProfitAndLoss
-        function_name: get_profit_and_loss
-      - id: getReportTenNinetyNine
-        function_name: get_ten_ninety_nine
-      - id: getReportTrialBalance
-        function_name: get_trial_balance
-  - path: setup
-    operations:
-      - id: postSetup
-        function_name: create
-  - path: tax_rates
-    operations:
-      - id: createTaxRates
-        function_name: create
-      - id: getTaxRateByTaxType
-        function_name: get
-      - id: getTaxRates
-        function_name: list
-      - id: updateTaxRate
-        function_name: update
-  - path: tracking_categories
-    operations:
-      - id: createTrackingCategory
-        function_name: create
-      - id: deleteTrackingCategory
-        function_name: delete
-      - id: getTrackingCategories
-        function_name: list
-      - id: getTrackingCategory
-        function_name: get
-      - id: updateTrackingCategory
-        function_name: update
-  - path: tracking_categories.options
-    operations:
-      - id: createTrackingOptions
-        function_name: create
-      - id: deleteTrackingOptions
-        function_name: delete
-      - id: updateTrackingOptions
-        function_name: update
-  - path: users
-    operations:
-      - id: getUser
-        function_name: get
-      - id: getUsers
-        function_name: list
+- path: accounts
+  operations:
+  - id: createAccount
+    function_name: create
+  - id: deleteAccount
+    function_name: delete
+  - id: getAccount
+    function_name: get
+  - id: getAccounts
+    function_name: list
+  - id: updateAccount
+    function_name: update
+- path: accounts.attachments
+  operations:
+  - id: getAccountAttachmentById
+    function_name: get_by_id
+  - id: getAccountAttachments
+    function_name: list
+- path: bank_transactions
+  operations:
+  - id: createBankTransactions
+    function_name: create
+  - id: getBankTransaction
+    function_name: get
+  - id: getBankTransactions
+    function_name: list
+  - id: updateBankTransaction
+    function_name: update
+  - id: updateOrCreateBankTransactions
+    function_name: update_or_create
+- path: bank_transactions.attachments
+  operations:
+  - id: getBankTransactionAttachmentById
+    function_name: get_by_id
+  - id: getBankTransactionAttachments
+    function_name: list
+- path: bank_transactions.history
+  operations:
+  - id: createBankTransactionHistoryRecord
+    function_name: create_record
+  - id: getBankTransactionsHistory
+    function_name: list
+- path: bank_transfers
+  operations:
+  - id: createBankTransfer
+    function_name: create
+  - id: getBankTransfer
+    function_name: get
+  - id: getBankTransfers
+    function_name: list
+- path: bank_transfers.attachments
+  operations:
+  - id: getBankTransferAttachmentById
+    function_name: get_by_id
+  - id: getBankTransferAttachments
+    function_name: list
+- path: bank_transfers.history
+  operations:
+  - id: createBankTransferHistoryRecord
+    function_name: create_record
+  - id: getBankTransferHistory
+    function_name: list
+- path: batch_payments
+  operations:
+  - id: createBatchPayment
+    function_name: create
+  - id: deleteBatchPayment
+    function_name: delete
+  - id: deleteBatchPaymentByUrlParam
+    function_name: update
+  - id: getBatchPayment
+    function_name: get
+  - id: getBatchPayments
+    function_name: list
+- path: batch_payments.history
+  operations:
+  - id: createBatchPaymentHistoryRecord
+    function_name: create_record
+  - id: getBatchPaymentHistory
+    function_name: list
+- path: branding_themes
+  operations:
+  - id: getBrandingTheme
+    function_name: get
+  - id: getBrandingThemes
+    function_name: list
+- path: branding_themes.payment_services
+  operations:
+  - id: createBrandingThemePaymentServices
+    function_name: create
+  - id: getBrandingThemePaymentServices
+    function_name: list
+- path: budgets
+  operations:
+  - id: getBudget
+    function_name: get
+  - id: getBudgets
+    function_name: list
+- path: contact_groups
+  operations:
+  - id: createContactGroup
+    function_name: create
+  - id: getContactGroup
+    function_name: get
+  - id: getContactGroups
+    function_name: list
+  - id: updateContactGroup
+    function_name: update
+- path: contact_groups.contacts
+  operations:
+  - id: createContactGroupContacts
+    function_name: create
+  - id: deleteContactGroupContact
+    function_name: delete
+  - id: deleteContactGroupContacts
+    function_name: delete_all
+- path: contacts
+  operations:
+  - id: createContacts
+    function_name: create
+  - id: getContact
+    function_name: get
+  - id: getContacts
+    function_name: list
+  - id: updateContact
+    function_name: update
+  - id: updateOrCreateContacts
+    function_name: update_or_create
+- path: contacts.attachments
+  operations:
+  - id: getContactAttachmentById
+    function_name: get_by_id
+  - id: getContactAttachments
+    function_name: list
+- path: contacts.cis_settings
+  operations:
+  - id: getContactCISSettings
+    function_name: list
+- path: contacts.history
+  operations:
+  - id: createContactHistory
+    function_name: create
+  - id: getContactHistory
+    function_name: list
+- path: credit_notes
+  operations:
+  - id: createCreditNotes
+    function_name: create
+  - id: getCreditNote
+    function_name: get
+  - id: getCreditNotes
+    function_name: list
+  - id: updateCreditNote
+    function_name: update
+  - id: updateOrCreateCreditNotes
+    function_name: update_or_create
+- path: credit_notes.allocations
+  operations:
+  - id: createCreditNoteAllocation
+    function_name: create
+  - id: deleteCreditNoteAllocations
+    function_name: delete
+- path: credit_notes.attachments
+  operations:
+  - id: getCreditNoteAttachmentById
+    function_name: get_by_id
+  - id: getCreditNoteAttachments
+    function_name: list
+- path: credit_notes.history
+  operations:
+  - id: createCreditNoteHistory
+    function_name: create_record
+  - id: getCreditNoteHistory
+    function_name: list
+- path: credit_notes.pdf
+  operations:
+  - id: getCreditNoteAsPdf
+    function_name: get
+- path: currencies
+  operations:
+  - id: createCurrency
+    function_name: create
+  - id: getCurrencies
+    function_name: list
+- path: employees
+  operations:
+  - id: createEmployees
+    function_name: create
+  - id: getEmployee
+    function_name: get
+  - id: getEmployees
+    function_name: list
+  - id: updateOrCreateEmployees
+    function_name: update_or_create
+- path: expense_claims
+  operations:
+  - id: createExpenseClaims
+    function_name: create
+  - id: getExpenseClaim
+    function_name: get
+  - id: getExpenseClaims
+    function_name: list
+  - id: updateExpenseClaim
+    function_name: update
+- path: expense_claims.history
+  operations:
+  - id: createExpenseClaimHistory
+    function_name: create_record
+  - id: getExpenseClaimHistory
+    function_name: list
+- path: invoice_reminders.settings
+  operations:
+  - id: getInvoiceReminders
+    function_name: list
+- path: invoices
+  operations:
+  - id: createInvoices
+    function_name: create
+  - id: getInvoice
+    function_name: get
+  - id: getInvoices
+    function_name: list
+  - id: updateInvoice
+    function_name: update
+  - id: updateOrCreateInvoices
+    function_name: update_or_create
+- path: invoices.attachments
+  operations:
+  - id: getInvoiceAttachmentById
+    function_name: get_by_id
+  - id: getInvoiceAttachments
+    function_name: list
+- path: invoices.email
+  operations:
+  - id: emailInvoice
+    function_name: send
+- path: invoices.history
+  operations:
+  - id: createInvoiceHistory
+    function_name: create_record
+  - id: getInvoiceHistory
+    function_name: list
+- path: invoices.online_invoice
+  operations:
+  - id: getOnlineInvoice
+    function_name: get
+- path: invoices.pdf
+  operations:
+  - id: getInvoiceAsPdf
+    function_name: get
+- path: items
+  operations:
+  - id: createItems
+    function_name: create
+  - id: deleteItem
+    function_name: delete
+  - id: getItem
+    function_name: get
+  - id: getItems
+    function_name: list
+  - id: updateItem
+    function_name: update
+  - id: updateOrCreateItems
+    function_name: update_or_create
+- path: items.history
+  operations:
+  - id: createItemHistory
+    function_name: create_record
+  - id: getItemHistory
+    function_name: list
+- path: journals
+  operations:
+  - id: getJournal
+    function_name: get
+  - id: getJournals
+    function_name: list
+- path: linked_transactions
+  operations:
+  - id: createLinkedTransaction
+    function_name: create
+  - id: deleteLinkedTransaction
+    function_name: delete
+  - id: getLinkedTransaction
+    function_name: get
+  - id: getLinkedTransactions
+    function_name: list
+  - id: updateLinkedTransaction
+    function_name: update
+- path: manual_journals
+  operations:
+  - id: createManualJournals
+    function_name: create
+  - id: getManualJournal
+    function_name: get
+  - id: getManualJournals
+    function_name: list
+  - id: updateManualJournal
+    function_name: update
+  - id: updateOrCreateManualJournals
+    function_name: update_or_create
+- path: manual_journals.attachments
+  operations:
+  - id: getManualJournalAttachmentById
+    function_name: get_by_id
+  - id: getManualJournalAttachments
+    function_name: list
+- path: manual_journals.history
+  operations:
+  - id: createManualJournalHistoryRecord
+    function_name: create_record
+  - id: getManualJournalsHistory
+    function_name: list
+- path: organisation
+  operations:
+  - id: getOrganisations
+    function_name: list
+- path: organisation.actions
+  operations:
+  - id: getOrganisationActions
+    function_name: list
+- path: organisation.cis_settings
+  operations:
+  - id: getOrganisationCISSettings
+    function_name: list
+- path: overpayments
+  operations:
+  - id: getOverpayment
+    function_name: get
+  - id: getOverpayments
+    function_name: list
+- path: overpayments.allocations
+  operations:
+  - id: createOverpaymentAllocations
+    function_name: create
+  - id: deleteOverpaymentAllocations
+    function_name: delete
+- path: overpayments.history
+  operations:
+  - id: createOverpaymentHistory
+    function_name: create_record
+  - id: getOverpaymentHistory
+    function_name: list
+- path: payment_services
+  operations:
+  - id: createPaymentService
+    function_name: create
+  - id: getPaymentServices
+    function_name: list
+- path: payments
+  operations:
+  - id: createPayment
+    function_name: create_1
+  - id: createPayments
+    function_name: create
+  - id: deletePayment
+    function_name: delete
+  - id: getPayment
+    function_name: get
+  - id: getPayments
+    function_name: list
+- path: payments.history
+  operations:
+  - id: createPaymentHistory
+    function_name: create_record
+  - id: getPaymentHistory
+    function_name: list
+- path: prepayments
+  operations:
+  - id: getPrepayment
+    function_name: get
+  - id: getPrepayments
+    function_name: list
+- path: prepayments.allocations
+  operations:
+  - id: createPrepaymentAllocations
+    function_name: create
+  - id: deletePrepaymentAllocations
+    function_name: delete
+- path: prepayments.history
+  operations:
+  - id: createPrepaymentHistory
+    function_name: create_record
+  - id: getPrepaymentHistory
+    function_name: list
+- path: purchase_orders
+  operations:
+  - id: createPurchaseOrders
+    function_name: create
+  - id: getPurchaseOrder
+    function_name: get
+  - id: getPurchaseOrders
+    function_name: list
+  - id: updateOrCreatePurchaseOrders
+    function_name: update_or_create
+  - id: updatePurchaseOrder
+    function_name: update
+- path: purchase_orders.attachments
+  operations:
+  - id: getPurchaseOrderAsPdf
+    function_name: get_as_pdf
+  - id: getPurchaseOrderAttachmentById
+    function_name: get_by_id
+  - id: getPurchaseOrderAttachments
+    function_name: list
+- path: purchase_orders.history
+  operations:
+  - id: createPurchaseOrderHistory
+    function_name: create_record
+  - id: getPurchaseOrderHistory
+    function_name: list
+- path: quotes
+  operations:
+  - id: createQuotes
+    function_name: create
+  - id: getQuote
+    function_name: get
+  - id: getQuoteAsPdf
+    function_name: get_as_pdf
+  - id: getQuotes
+    function_name: list
+  - id: updateOrCreateQuotes
+    function_name: update_or_create
+  - id: updateQuote
+    function_name: update
+- path: quotes.attachments
+  operations:
+  - id: getQuoteAttachmentById
+    function_name: get_by_id
+  - id: getQuoteAttachments
+    function_name: list
+- path: quotes.history
+  operations:
+  - id: createQuoteHistory
+    function_name: create_record
+  - id: getQuoteHistory
+    function_name: list
+- path: receipts
+  operations:
+  - id: createReceipt
+    function_name: create
+  - id: getReceipt
+    function_name: get
+  - id: getReceipts
+    function_name: list
+  - id: updateReceipt
+    function_name: update
+- path: receipts.attachments
+  operations:
+  - id: getReceiptAttachmentById
+    function_name: get_by_id
+  - id: getReceiptAttachments
+    function_name: list
+- path: receipts.history
+  operations:
+  - id: createReceiptHistory
+    function_name: create_record
+  - id: getReceiptHistory
+    function_name: list
+- path: repeating_invoices
+  operations:
+  - id: createRepeatingInvoices
+    function_name: create
+  - id: getRepeatingInvoice
+    function_name: get
+  - id: getRepeatingInvoices
+    function_name: list
+  - id: updateOrCreateRepeatingInvoices
+    function_name: update_or_create
+  - id: updateRepeatingInvoice
+    function_name: update
+- path: repeating_invoices.attachments
+  operations:
+  - id: getRepeatingInvoiceAttachmentById
+    function_name: get_by_id
+  - id: getRepeatingInvoiceAttachments
+    function_name: list
+- path: repeating_invoices.history
+  operations:
+  - id: createRepeatingInvoiceHistory
+    function_name: create_record
+  - id: getRepeatingInvoiceHistory
+    function_name: list
+- path: reports
+  operations:
+  - id: getReportAgedPayablesByContact
+    function_name: get_aged_payables_by_contact
+  - id: getReportAgedReceivablesByContact
+    function_name: get_aged_receivables_by_contact
+  - id: getReportBalanceSheet
+    function_name: get_balance_sheet
+  - id: getReportBankSummary
+    function_name: get_bank_summary
+  - id: getReportBudgetSummary
+    function_name: get_budget_summary
+  - id: getReportExecutiveSummary
+    function_name: get_executive_summary
+  - id: getReportFromId
+    function_name: get
+  - id: getReportProfitAndLoss
+    function_name: get_profit_and_loss
+  - id: getReportTenNinetyNine
+    function_name: get_ten_ninety_nine
+  - id: getReportTrialBalance
+    function_name: get_trial_balance
+  - id: getReportsList
+    function_name: list
+- path: setup
+  operations:
+  - id: postSetup
+    function_name: create
+- path: tax_rates
+  operations:
+  - id: createTaxRates
+    function_name: create
+  - id: getTaxRateByTaxType
+    function_name: get
+  - id: getTaxRates
+    function_name: list
+  - id: updateTaxRate
+    function_name: update
+- path: tracking_categories
+  operations:
+  - id: createTrackingCategory
+    function_name: create
+  - id: deleteTrackingCategory
+    function_name: delete
+  - id: getTrackingCategories
+    function_name: list
+  - id: getTrackingCategory
+    function_name: get
+  - id: updateTrackingCategory
+    function_name: update
+- path: tracking_categories.options
+  operations:
+  - id: createTrackingOptions
+    function_name: create
+  - id: deleteTrackingOptions
+    function_name: delete
+  - id: updateTrackingOptions
+    function_name: update
+- path: users
+  operations:
+  - id: getUser
+    function_name: get
+  - id: getUsers
+    function_name: list

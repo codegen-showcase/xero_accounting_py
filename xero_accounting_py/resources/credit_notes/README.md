@@ -23,12 +23,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="CreditNoteNumber ASC",
@@ -45,12 +40,7 @@ res = client.credit_notes.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="CreditNoteNumber ASC",
@@ -91,12 +81,7 @@ res = await client.credit_notes.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.get(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -110,12 +95,7 @@ res = client.credit_notes.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.get(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -160,12 +140,7 @@ res = await client.credit_notes.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     credit_notes=[
@@ -195,12 +170,7 @@ res = client.credit_notes.update_or_create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     credit_notes=[
@@ -261,12 +231,7 @@ res = await client.credit_notes.update_or_create(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.update(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -297,12 +262,7 @@ res = client.credit_notes.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.update(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -364,12 +324,7 @@ res = await client.credit_notes.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     credit_notes=[
@@ -397,12 +352,7 @@ res = client.credit_notes.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     credit_notes=[

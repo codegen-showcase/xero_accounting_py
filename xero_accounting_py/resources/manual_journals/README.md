@@ -22,12 +22,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.manual_journals.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Date ASC",
@@ -43,12 +38,7 @@ res = client.manual_journals.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.manual_journals.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Date ASC",
@@ -87,12 +77,7 @@ res = await client.manual_journals.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.manual_journals.get(
     manual_journal_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -105,12 +90,7 @@ res = client.manual_journals.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.manual_journals.get(
     manual_journal_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -135,17 +115,17 @@ res = await client.manual_journals.get(
 
 #### Parameters
 
-| Parameter          | Required | Description                                                                                   | Example                                                                                                                               |
-| ------------------ | :------: | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                    | `"YOUR_XERO_TENANT_ID"`                                                                                                               |
-| `manual_journals`  |    ✗     |                                                                                               | `[{"has_attachments": True, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
-| `pagination`       |    ✗     |                                                                                               | `{}`                                                                                                                                  |
-| `└─ item_count`    |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page`          |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page_count`    |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page_size`     |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `summarize_errors` |    ✗     | If false return 200 OK and mix of successfully created objects and any with validation errors | `True`                                                                                                                                |
-| `warnings`         |    ✗     | Displays array of warning messages from the API                                               | `[{}]`                                                                                                                                |
+| Parameter          | Required | Description                                                                                   | Example                                                                                                                                |
+| ------------------ | :------: | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                    | `"YOUR_XERO_TENANT_ID"`                                                                                                                |
+| `manual_journals`  |    ✗     |                                                                                               | `[{"has_attachments": False, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
+| `pagination`       |    ✗     |                                                                                               | `{}`                                                                                                                                   |
+| `└─ item_count`    |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page`          |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page_count`    |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page_size`     |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `summarize_errors` |    ✗     | If false return 200 OK and mix of successfully created objects and any with validation errors | `True`                                                                                                                                 |
+| `warnings`         |    ✗     | Displays array of warning messages from the API                                               | `[{}]`                                                                                                                                 |
 
 #### Synchronous Client
 
@@ -153,12 +133,7 @@ res = await client.manual_journals.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.manual_journals.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     manual_journals=[
@@ -190,12 +165,7 @@ res = client.manual_journals.update_or_create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.manual_journals.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     manual_journals=[
@@ -239,17 +209,17 @@ res = await client.manual_journals.update_or_create(
 
 #### Parameters
 
-| Parameter           | Required | Description                                     | Example                                                                                                                               |
-| ------------------- | :------: | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `manual_journal_id` |    ✓     | Unique identifier for a ManualJournal           | `"00000000-0000-0000-0000-000000000000"`                                                                                              |
-| `xero_tenant_id`    |    ✓     | Xero identifier for Tenant                      | `"YOUR_XERO_TENANT_ID"`                                                                                                               |
-| `manual_journals`   |    ✗     |                                                 | `[{"has_attachments": True, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
-| `pagination`        |    ✗     |                                                 | `{}`                                                                                                                                  |
-| `└─ item_count`     |    ✗     |                                                 | `123`                                                                                                                                 |
-| `└─ page`           |    ✗     |                                                 | `123`                                                                                                                                 |
-| `└─ page_count`     |    ✗     |                                                 | `123`                                                                                                                                 |
-| `└─ page_size`      |    ✗     |                                                 | `123`                                                                                                                                 |
-| `warnings`          |    ✗     | Displays array of warning messages from the API | `[{}]`                                                                                                                                |
+| Parameter           | Required | Description                                     | Example                                                                                                                                |
+| ------------------- | :------: | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `manual_journal_id` |    ✓     | Unique identifier for a ManualJournal           | `"00000000-0000-0000-0000-000000000000"`                                                                                               |
+| `xero_tenant_id`    |    ✓     | Xero identifier for Tenant                      | `"YOUR_XERO_TENANT_ID"`                                                                                                                |
+| `manual_journals`   |    ✗     |                                                 | `[{"has_attachments": False, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
+| `pagination`        |    ✗     |                                                 | `{}`                                                                                                                                   |
+| `└─ item_count`     |    ✗     |                                                 | `123`                                                                                                                                  |
+| `└─ page`           |    ✗     |                                                 | `123`                                                                                                                                  |
+| `└─ page_count`     |    ✗     |                                                 | `123`                                                                                                                                  |
+| `└─ page_size`      |    ✗     |                                                 | `123`                                                                                                                                  |
+| `warnings`          |    ✗     | Displays array of warning messages from the API | `[{}]`                                                                                                                                 |
 
 #### Synchronous Client
 
@@ -257,12 +227,7 @@ res = await client.manual_journals.update_or_create(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.manual_journals.update(
     manual_journal_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -270,7 +235,7 @@ res = client.manual_journals.update(
         {
             "journal_lines": [
                 {
-                    "account_code": "string",
+                    "account_code": "720",
                     "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                     "is_blank": False,
                     "line_amount": -2569.0,
@@ -290,12 +255,7 @@ res = client.manual_journals.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.manual_journals.update(
     manual_journal_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -303,7 +263,7 @@ res = await client.manual_journals.update(
         {
             "journal_lines": [
                 {
-                    "account_code": "string",
+                    "account_code": "720",
                     "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                     "is_blank": False,
                     "line_amount": -2569.0,
@@ -335,17 +295,17 @@ res = await client.manual_journals.update(
 
 #### Parameters
 
-| Parameter          | Required | Description                                                                                   | Example                                                                                                                               |
-| ------------------ | :------: | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                    | `"YOUR_XERO_TENANT_ID"`                                                                                                               |
-| `manual_journals`  |    ✗     |                                                                                               | `[{"has_attachments": True, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
-| `pagination`       |    ✗     |                                                                                               | `{}`                                                                                                                                  |
-| `└─ item_count`    |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page`          |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page_count`    |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `└─ page_size`     |    ✗     |                                                                                               | `123`                                                                                                                                 |
-| `summarize_errors` |    ✗     | If false return 200 OK and mix of successfully created objects and any with validation errors | `True`                                                                                                                                |
-| `warnings`         |    ✗     | Displays array of warning messages from the API                                               | `[{}]`                                                                                                                                |
+| Parameter          | Required | Description                                                                                   | Example                                                                                                                                |
+| ------------------ | :------: | --------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                    | `"YOUR_XERO_TENANT_ID"`                                                                                                                |
+| `manual_journals`  |    ✗     |                                                                                               | `[{"has_attachments": False, "narration": "string", "status_attribute_string": "ERROR", "updated_date_utc": "/Date(1573755038314)/"}]` |
+| `pagination`       |    ✗     |                                                                                               | `{}`                                                                                                                                   |
+| `└─ item_count`    |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page`          |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page_count`    |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `└─ page_size`     |    ✗     |                                                                                               | `123`                                                                                                                                  |
+| `summarize_errors` |    ✗     | If false return 200 OK and mix of successfully created objects and any with validation errors | `True`                                                                                                                                 |
+| `warnings`         |    ✗     | Displays array of warning messages from the API                                               | `[{}]`                                                                                                                                 |
 
 #### Synchronous Client
 
@@ -353,12 +313,7 @@ res = await client.manual_journals.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.manual_journals.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     manual_journals=[
@@ -390,12 +345,7 @@ res = client.manual_journals.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.manual_journals.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     manual_journals=[

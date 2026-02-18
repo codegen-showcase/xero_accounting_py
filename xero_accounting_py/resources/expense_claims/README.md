@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.expense_claims.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Status ASC",
@@ -39,12 +34,7 @@ res = client.expense_claims.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.expense_claims.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Status ASC",
@@ -81,12 +71,7 @@ res = await client.expense_claims.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.expense_claims.get(
     expense_claim_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -99,12 +84,7 @@ res = client.expense_claims.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.expense_claims.get(
     expense_claim_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -141,12 +121,7 @@ res = await client.expense_claims.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.expense_claims.update(
     expense_claim_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -165,12 +140,7 @@ res = client.expense_claims.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.expense_claims.update(
     expense_claim_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -212,12 +182,7 @@ res = await client.expense_claims.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.expense_claims.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     expense_claims=[
@@ -235,12 +200,7 @@ res = client.expense_claims.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.expense_claims.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     expense_claims=[

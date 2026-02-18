@@ -25,14 +25,7 @@ def test_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -81,14 +74,7 @@ async def test_await_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -136,14 +122,7 @@ def test_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -192,14 +171,7 @@ async def test_await_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -247,14 +219,7 @@ def test_update_or_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -303,14 +268,7 @@ async def test_await_update_or_create_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -358,14 +316,7 @@ def test_update_or_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -414,14 +365,7 @@ async def test_await_update_or_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.update_or_create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         employees=[
@@ -469,14 +413,7 @@ def test_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.get(
         employee_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -509,14 +446,7 @@ async def test_await_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.get(
         employee_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -548,14 +478,7 @@ def test_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="LastName ASC",
@@ -589,14 +512,7 @@ async def test_await_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="LastName ASC",
@@ -629,14 +545,7 @@ def test_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.employees.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="LastName ASC",
@@ -670,14 +579,7 @@ async def test_await_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.employees.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="LastName ASC",

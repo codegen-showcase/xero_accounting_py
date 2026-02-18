@@ -60,11 +60,8 @@ poetry run pytests
 
 ### [accounts.attachments](xero_accounting_py/resources/accounts/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/accounts/attachments/README.md#create_by_filename) - Creates an attachment on a specific account
-- [get_by_filename](xero_accounting_py/resources/accounts/attachments/README.md#get_by_filename) - Retrieves an attachment for a specific account by filename
 - [get_by_id](xero_accounting_py/resources/accounts/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific account using a unique attachment Id
 - [list](xero_accounting_py/resources/accounts/attachments/README.md#list) - Retrieves attachments for a specific accounts by using a unique account Id
-- [update_by_filename](xero_accounting_py/resources/accounts/attachments/README.md#update_by_filename) - Updates attachment on a specific account by filename
 
 ### [bank_transactions](xero_accounting_py/resources/bank_transactions/README.md)
 
@@ -76,11 +73,8 @@ poetry run pytests
 
 ### [bank_transactions.attachments](xero_accounting_py/resources/bank_transactions/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/bank_transactions/attachments/README.md#create_by_filename) - Creates an attachment for a specific bank transaction by filename
-- [get_by_filename](xero_accounting_py/resources/bank_transactions/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific bank transaction by filename
 - [get_by_id](xero_accounting_py/resources/bank_transactions/attachments/README.md#get_by_id) - Retrieves specific attachments from a specific BankTransaction using a unique attachment Id
 - [list](xero_accounting_py/resources/bank_transactions/attachments/README.md#list) - Retrieves any attachments from a specific bank transactions
-- [update_by_filename](xero_accounting_py/resources/bank_transactions/attachments/README.md#update_by_filename) - Updates a specific attachment from a specific bank transaction by filename
 
 ### [bank_transactions.history](xero_accounting_py/resources/bank_transactions/history/README.md)
 
@@ -95,11 +89,8 @@ poetry run pytests
 
 ### [bank_transfers.attachments](xero_accounting_py/resources/bank_transfers/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/bank_transfers/attachments/README.md#create_by_filename) - PUT /BankTransfers/{BankTransferID}/Attachments/{FileName}
-- [get_by_filename](xero_accounting_py/resources/bank_transfers/attachments/README.md#get_by_filename) - Retrieves a specific attachment on a specific bank transfer by file name
 - [get_by_id](xero_accounting_py/resources/bank_transfers/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific bank transfer using a unique attachment ID
 - [list](xero_accounting_py/resources/bank_transfers/attachments/README.md#list) - Retrieves attachments from a specific bank transfer
-- [update_by_filename](xero_accounting_py/resources/bank_transfers/attachments/README.md#update_by_filename) - POST /BankTransfers/{BankTransferID}/Attachments/{FileName}
 
 ### [bank_transfers.history](xero_accounting_py/resources/bank_transfers/history/README.md)
 
@@ -151,18 +142,14 @@ poetry run pytests
 
 - [create](xero_accounting_py/resources/contacts/README.md#create) - Creates multiple contacts (bulk) in a Xero organisation
 - [get](xero_accounting_py/resources/contacts/README.md#get) - Retrieves a specific contacts in a Xero organisation using a unique contact Id
-- [get_by_contact_number](xero_accounting_py/resources/contacts/README.md#get_by_contact_number) - Retrieves a specific contact by contact number in a Xero organisation
 - [list](xero_accounting_py/resources/contacts/README.md#list) - Retrieves all contacts in a Xero organisation
 - [update](xero_accounting_py/resources/contacts/README.md#update) - Updates a specific contact in a Xero organisation
 - [update_or_create](xero_accounting_py/resources/contacts/README.md#update_or_create) - Updates or creates one or more contacts in a Xero organisation
 
 ### [contacts.attachments](xero_accounting_py/resources/contacts/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/contacts/attachments/README.md#create_by_filename) - PUT /Contacts/{ContactID}/Attachments/{FileName}
-- [get_by_filename](xero_accounting_py/resources/contacts/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific contact by file name
 - [get_by_id](xero_accounting_py/resources/contacts/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific contact using a unique attachment Id
 - [list](xero_accounting_py/resources/contacts/attachments/README.md#list) - Retrieves attachments for a specific contact in a Xero organisation
-- [update_by_filename](xero_accounting_py/resources/contacts/attachments/README.md#update_by_filename) - POST /Contacts/{ContactID}/Attachments/{FileName}
 
 ### [contacts.cis_settings](xero_accounting_py/resources/contacts/cis_settings/README.md)
 
@@ -188,11 +175,8 @@ poetry run pytests
 
 ### [credit_notes.attachments](xero_accounting_py/resources/credit_notes/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/credit_notes/attachments/README.md#create_by_filename) - Creates an attachment for a specific credit note
-- [get_by_filename](xero_accounting_py/resources/credit_notes/attachments/README.md#get_by_filename) - Retrieves a specific attachment on a specific credit note by file name
 - [get_by_id](xero_accounting_py/resources/credit_notes/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific credit note using a unique attachment Id
 - [list](xero_accounting_py/resources/credit_notes/attachments/README.md#list) - Retrieves attachments for a specific credit notes
-- [update_by_filename](xero_accounting_py/resources/credit_notes/attachments/README.md#update_by_filename) - Updates attachments on a specific credit note by file name
 
 ### [credit_notes.history](xero_accounting_py/resources/credit_notes/history/README.md)
 
@@ -241,11 +225,8 @@ poetry run pytests
 
 ### [invoices.attachments](xero_accounting_py/resources/invoices/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/invoices/attachments/README.md#create_by_filename) - Creates an attachment for a specific invoice or purchase bill by filename
-- [get_by_filename](xero_accounting_py/resources/invoices/attachments/README.md#get_by_filename) - Retrieves an attachment from a specific invoice or purchase bill by filename
 - [get_by_id](xero_accounting_py/resources/invoices/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific invoices or purchase bills by using a unique attachment Id
 - [list](xero_accounting_py/resources/invoices/attachments/README.md#list) - Retrieves attachments for a specific invoice or purchase bill
-- [update_by_filename](xero_accounting_py/resources/invoices/attachments/README.md#update_by_filename) - Updates an attachment from a specific invoices or purchase bill by filename
 
 ### [invoices.email](xero_accounting_py/resources/invoices/email/README.md)
 
@@ -281,7 +262,6 @@ poetry run pytests
 ### [journals](xero_accounting_py/resources/journals/README.md)
 
 - [get](xero_accounting_py/resources/journals/README.md#get) - Retrieves a specific journal using a unique journal Id.
-- [get_by_number](xero_accounting_py/resources/journals/README.md#get_by_number) - Retrieves a specific journal using a unique journal number.
 - [list](xero_accounting_py/resources/journals/README.md#list) - Retrieves journals
 
 ### [linked_transactions](xero_accounting_py/resources/linked_transactions/README.md)
@@ -302,11 +282,8 @@ poetry run pytests
 
 ### [manual_journals.attachments](xero_accounting_py/resources/manual_journals/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/manual_journals/attachments/README.md#create_by_filename) - Creates a specific attachment for a specific manual journal by file name
-- [get_by_filename](xero_accounting_py/resources/manual_journals/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific manual journal by file name
 - [get_by_id](xero_accounting_py/resources/manual_journals/attachments/README.md#get_by_id) - Allows you to retrieve a specific attachment from a specific manual journal using a unique attachment Id
 - [list](xero_accounting_py/resources/manual_journals/attachments/README.md#list) - Retrieves attachment for a specific manual journal
-- [update_by_filename](xero_accounting_py/resources/manual_journals/attachments/README.md#update_by_filename) - Updates a specific attachment from a specific manual journal by file name
 
 ### [manual_journals.history](xero_accounting_py/resources/manual_journals/history/README.md)
 
@@ -377,19 +354,15 @@ poetry run pytests
 
 - [create](xero_accounting_py/resources/purchase_orders/README.md#create) - Creates one or more purchase orders
 - [get](xero_accounting_py/resources/purchase_orders/README.md#get) - Retrieves a specific purchase order using a unique purchase order Id
-- [get_by_number](xero_accounting_py/resources/purchase_orders/README.md#get_by_number) - Retrieves a specific purchase order using purchase order number
 - [list](xero_accounting_py/resources/purchase_orders/README.md#list) - Retrieves purchase orders
 - [update](xero_accounting_py/resources/purchase_orders/README.md#update) - Updates a specific purchase order
 - [update_or_create](xero_accounting_py/resources/purchase_orders/README.md#update_or_create) - Updates or creates one or more purchase orders
 
 ### [purchase_orders.attachments](xero_accounting_py/resources/purchase_orders/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/purchase_orders/attachments/README.md#create_by_filename) - Creates attachment for a specific purchase order
 - [get_as_pdf](xero_accounting_py/resources/purchase_orders/attachments/README.md#get_as_pdf) - Retrieves specific purchase order as PDF files using a unique purchase order Id
-- [get_by_filename](xero_accounting_py/resources/purchase_orders/attachments/README.md#get_by_filename) - Retrieves a specific attachment for a specific purchase order by filename
 - [get_by_id](xero_accounting_py/resources/purchase_orders/attachments/README.md#get_by_id) - Retrieves specific attachment for a specific purchase order using a unique attachment Id
 - [list](xero_accounting_py/resources/purchase_orders/attachments/README.md#list) - Retrieves attachments for a specific purchase order
-- [update_by_filename](xero_accounting_py/resources/purchase_orders/attachments/README.md#update_by_filename) - Updates a specific attachment for a specific purchase order by filename
 
 ### [purchase_orders.history](xero_accounting_py/resources/purchase_orders/history/README.md)
 
@@ -407,11 +380,8 @@ poetry run pytests
 
 ### [quotes.attachments](xero_accounting_py/resources/quotes/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/quotes/attachments/README.md#create_by_filename) - Creates attachment for a specific quote
-- [get_by_filename](xero_accounting_py/resources/quotes/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific quote by filename
 - [get_by_id](xero_accounting_py/resources/quotes/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific quote using a unique attachment Id
 - [list](xero_accounting_py/resources/quotes/attachments/README.md#list) - Retrieves attachments for a specific quote
-- [update_by_filename](xero_accounting_py/resources/quotes/attachments/README.md#update_by_filename) - Updates a specific attachment from a specific quote by filename
 
 ### [quotes.history](xero_accounting_py/resources/quotes/history/README.md)
 
@@ -427,11 +397,8 @@ poetry run pytests
 
 ### [receipts.attachments](xero_accounting_py/resources/receipts/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/receipts/attachments/README.md#create_by_filename) - Creates an attachment on a specific expense claim receipts by file name
-- [get_by_filename](xero_accounting_py/resources/receipts/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific expense claim receipts by file name
 - [get_by_id](xero_accounting_py/resources/receipts/attachments/README.md#get_by_id) - Retrieves a specific attachments from a specific expense claim receipts by using a unique attachment Id
 - [list](xero_accounting_py/resources/receipts/attachments/README.md#list) - Retrieves attachments for a specific expense claim receipt
-- [update_by_filename](xero_accounting_py/resources/receipts/attachments/README.md#update_by_filename) - Updates a specific attachment on a specific expense claim receipts by file name
 
 ### [receipts.history](xero_accounting_py/resources/receipts/history/README.md)
 
@@ -448,11 +415,8 @@ poetry run pytests
 
 ### [repeating_invoices.attachments](xero_accounting_py/resources/repeating_invoices/attachments/README.md)
 
-- [create_by_filename](xero_accounting_py/resources/repeating_invoices/attachments/README.md#create_by_filename) - Creates an attachment from a specific repeating invoices by file name
-- [get_by_filename](xero_accounting_py/resources/repeating_invoices/attachments/README.md#get_by_filename) - Retrieves a specific attachment from a specific repeating invoices by file name
 - [get_by_id](xero_accounting_py/resources/repeating_invoices/attachments/README.md#get_by_id) - Retrieves a specific attachment from a specific repeating invoice
 - [list](xero_accounting_py/resources/repeating_invoices/attachments/README.md#list) - Retrieves attachments from a specific repeating invoice
-- [update_by_filename](xero_accounting_py/resources/repeating_invoices/attachments/README.md#update_by_filename) - Updates a specific attachment from a specific repeating invoices by file name
 
 ### [repeating_invoices.history](xero_accounting_py/resources/repeating_invoices/history/README.md)
 

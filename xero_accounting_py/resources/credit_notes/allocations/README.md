@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.allocations.delete(
     allocation_id="00000000-0000-0000-0000-000000000000",
     credit_note_id="00000000-0000-0000-0000-000000000000",
@@ -39,12 +34,7 @@ res = client.credit_notes.allocations.delete(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.allocations.delete(
     allocation_id="00000000-0000-0000-0000-000000000000",
     credit_note_id="00000000-0000-0000-0000-000000000000",
@@ -61,7 +51,7 @@ res = await client.credit_notes.allocations.delete(
 ##### Example
 
 ```python
-{"amount": 123.0, "date": "string", "invoice": {"has_attachments": True, "has_errors": True, "updated_date_utc": "/Date(1573755038314)/"}}
+{"amount": 123.0, "date": "string", "invoice": {"has_attachments": False, "has_errors": False, "updated_date_utc": "/Date(1573755038314)/"}}
 ```
 
 ### Creates allocation for a specific credit note <a name="create"></a>
@@ -83,12 +73,7 @@ res = await client.credit_notes.allocations.delete(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.credit_notes.allocations.create(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -118,12 +103,7 @@ res = client.credit_notes.allocations.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.credit_notes.allocations.create(
     credit_note_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",

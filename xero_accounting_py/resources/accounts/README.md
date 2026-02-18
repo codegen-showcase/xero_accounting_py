@@ -19,12 +19,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.accounts.delete(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -37,12 +32,7 @@ res = client.accounts.delete(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.accounts.delete(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -79,12 +69,7 @@ res = await client.accounts.delete(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.accounts.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Name ASC",
@@ -98,12 +83,7 @@ res = client.accounts.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.accounts.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Name ASC",
@@ -140,12 +120,7 @@ res = await client.accounts.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.accounts.get(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -158,12 +133,7 @@ res = client.accounts.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.accounts.get(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -188,11 +158,11 @@ res = await client.accounts.get(
 
 #### Parameters
 
-| Parameter        | Required | Description                          | Example                                                                                                                                                                  |
-| ---------------- | :------: | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `account_id`     |    ✓     | Unique identifier for Account object | `"00000000-0000-0000-0000-000000000000"`                                                                                                                                 |
-| `xero_tenant_id` |    ✓     | Xero identifier for Tenant           | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                  |
-| `accounts`       |    ✗     |                                      | `[{"account_id": "00000000-0000-0000-0000-000000000000", "code": "string", "has_attachments": True, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}]` |
+| Parameter        | Required | Description                          | Example                                                                                                                                                                 |
+| ---------------- | :------: | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `account_id`     |    ✓     | Unique identifier for Account object | `"00000000-0000-0000-0000-000000000000"`                                                                                                                                |
+| `xero_tenant_id` |    ✓     | Xero identifier for Tenant           | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                 |
+| `accounts`       |    ✗     |                                      | `[{"account_id": "00000000-0000-0000-0000-000000000000", "code": "4400", "has_attachments": False, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}]` |
 
 #### Synchronous Client
 
@@ -200,12 +170,7 @@ res = await client.accounts.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.accounts.update(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -234,12 +199,7 @@ res = client.accounts.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.accounts.update(
     account_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -288,11 +248,11 @@ res = await client.accounts.update(
 | `bank_account_number`        |    ✗     | For bank accounts only (Account Type BANK)                                                                                                                         | `"string"`                               |
 | `bank_account_type`          |    ✗     | For bank accounts only. See Bank Account types                                                                                                                     | `"BANK"`                                 |
 | `class_`                     |    ✗     | See Account Class Types                                                                                                                                            | `"ASSET"`                                |
-| `code`                       |    ✗     | Customer defined alpha numeric account code e.g 200 or SALES (max length = 10)                                                                                     | `"string"`                               |
+| `code`                       |    ✗     | Customer defined alpha numeric account code e.g 200 or SALES (max length = 10)                                                                                     | `"4400"`                                 |
 | `currency_code`              |    ✗     |                                                                                                                                                                    | `"AED"`                                  |
 | `description`                |    ✗     | Description of the Account. Valid for all types of accounts except bank accounts (max length = 4000)                                                               | `"string"`                               |
 | `enable_payments_to_account` |    ✗     | Boolean – describes whether account can have payments applied to it                                                                                                | `True`                                   |
-| `has_attachments`            |    ✗     | boolean to indicate if an account has an attachment (read only)                                                                                                    | `True`                                   |
+| `has_attachments`            |    ✗     | boolean to indicate if an account has an attachment (read only)                                                                                                    | `False`                                  |
 | `name`                       |    ✗     | Name of account (max length = 150)                                                                                                                                 | `"Food Sales"`                           |
 | `reporting_code`             |    ✗     | Shown if set                                                                                                                                                       | `"string"`                               |
 | `reporting_code_name`        |    ✗     | Shown if set                                                                                                                                                       | `"string"`                               |
@@ -310,18 +270,13 @@ res = await client.accounts.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.accounts.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     account_id="00000000-0000-0000-0000-000000000000",
     code="123456",
     description="Hello World",
-    has_attachments=True,
+    has_attachments=False,
     name="Foobar",
     type_="EXPENSE",
     updated_date_utc="/Date(1573755038314)/",
@@ -334,18 +289,13 @@ res = client.accounts.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.accounts.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     account_id="00000000-0000-0000-0000-000000000000",
     code="123456",
     description="Hello World",
-    has_attachments=True,
+    has_attachments=False,
     name="Foobar",
     type_="EXPENSE",
     updated_date_utc="/Date(1573755038314)/",

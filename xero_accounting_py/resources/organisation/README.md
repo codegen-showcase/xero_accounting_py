@@ -18,12 +18,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.organisation.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 ```
 
@@ -33,12 +28,7 @@ res = client.organisation.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.organisation.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 ```
 

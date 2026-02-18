@@ -1,13 +1,7 @@
 import httpx
 import typing
 
-from make_api_request import (
-    AsyncBaseClient,
-    AuthBearer,
-    OAuth2,
-    OAuth2ClientCredentials,
-    SyncBaseClient,
-)
+from make_api_request import AsyncBaseClient, AuthBearer, SyncBaseClient
 from xero_accounting_py.environment import Environment, _get_base_url
 from xero_accounting_py.resources.accounts import AccountsClient, AsyncAccountsClient
 from xero_accounting_py.resources.bank_transactions import (
@@ -105,7 +99,7 @@ class Client:
         httpx_client: typing.Optional[httpx.Client] = None,
         base_url: typing.Optional[str] = None,
         environment: Environment = Environment.ENVIRONMENT,
-        oauth: typing.Optional[OAuth2ClientCredentials] = None,
+        oauth_token: typing.Optional[str] = None,
     ):
         """Initialize root client"""
         self._base_client = SyncBaseClient(
@@ -113,18 +107,7 @@ class Client:
             httpx_client=httpx.Client(timeout=timeout)
             if httpx_client is None
             else httpx_client,
-            auths={
-                "OAuth2": OAuth2(
-                    base_url=_get_base_url(base_url=base_url, environment=environment),
-                    default_token_url="https://identity.xero.com/connect/token",
-                    access_token_pointer="/access_token",
-                    expires_in_pointer="/expires_in",
-                    credentials_location="request_body",
-                    body_content="form",
-                    request_mutator=AuthBearer(token=None),
-                    form=oauth,
-                )
-            },
+            auths={"OAuth2": AuthBearer(token=oauth_token)},
         )
         self.accounts = AccountsClient(base_client=self._base_client)
         self.contact_groups = ContactGroupsClient(base_client=self._base_client)
@@ -172,7 +155,7 @@ class AsyncClient:
         httpx_client: typing.Optional[httpx.AsyncClient] = None,
         base_url: typing.Optional[str] = None,
         environment: Environment = Environment.ENVIRONMENT,
-        oauth: typing.Optional[OAuth2ClientCredentials] = None,
+        oauth_token: typing.Optional[str] = None,
     ):
         """Initialize root client"""
         self._base_client = AsyncBaseClient(
@@ -180,18 +163,7 @@ class AsyncClient:
             httpx_client=httpx.AsyncClient(timeout=timeout)
             if httpx_client is None
             else httpx_client,
-            auths={
-                "OAuth2": OAuth2(
-                    base_url=_get_base_url(base_url=base_url, environment=environment),
-                    default_token_url="https://identity.xero.com/connect/token",
-                    access_token_pointer="/access_token",
-                    expires_in_pointer="/expires_in",
-                    credentials_location="request_body",
-                    body_content="form",
-                    request_mutator=AuthBearer(token=None),
-                    form=oauth,
-                )
-            },
+            auths={"OAuth2": AuthBearer(token=oauth_token)},
         )
         self.accounts = AsyncAccountsClient(base_client=self._base_client)
         self.contact_groups = AsyncContactGroupsClient(base_client=self._base_client)

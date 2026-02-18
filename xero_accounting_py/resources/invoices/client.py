@@ -114,16 +114,12 @@ class InvoicesClient:
         ```py
         client.invoices.list(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
-            contact_i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             created_by_my_app=False,
-            i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             include_archived=True,
-            invoice_numbers=["&quot;INV-001&quot;, &quot;INV-002&quot;"],
             order="InvoiceNumber ASC",
             page=1,
             page_size=100,
             search_term="SearchTerm=REF12",
-            statuses=["&quot;DRAFT&quot;, &quot;SUBMITTED&quot;"],
             summary_only=True,
             unitdp=4,
             where='Status=="DRAFT"',
@@ -704,16 +700,12 @@ class AsyncInvoicesClient:
         ```py
         await client.invoices.list(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
-            contact_i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             created_by_my_app=False,
-            i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             include_archived=True,
-            invoice_numbers=["&quot;INV-001&quot;, &quot;INV-002&quot;"],
             order="InvoiceNumber ASC",
             page=1,
             page_size=100,
             search_term="SearchTerm=REF12",
-            statuses=["&quot;DRAFT&quot;, &quot;SUBMITTED&quot;"],
             summary_only=True,
             unitdp=4,
             where='Status=="DRAFT"',

@@ -8,14 +8,14 @@
 
 #### Parameters
 
-| Parameter             | Required | Description                                                                        | Example                                                                                                                                                                  |
-| --------------------- | :------: | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `xero_tenant_id`      |    ✓     | Xero identifier for Tenant                                                         | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                  |
-| `accounts`            |    ✗     |                                                                                    | `[{"account_id": "00000000-0000-0000-0000-000000000000", "code": "string", "has_attachments": True, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}]` |
-| `conversion_balances` |    ✗     | Balance supplied for each account that has a value as at the conversion date.      | `[{}]`                                                                                                                                                                   |
-| `conversion_date`     |    ✗     |                                                                                    | `{"month": 1, "year": 2020}`                                                                                                                                             |
-| `└─ month`            |    ✗     | The month the organisation starts using Xero. Value is an integer between 1 and 12 | `1`                                                                                                                                                                      |
-| `└─ year`             |    ✗     | The year the organisation starts using Xero. Value is an integer greater than 2006 | `2020`                                                                                                                                                                   |
+| Parameter             | Required | Description                                                                        | Example                                                                                                                                                                 |
+| --------------------- | :------: | ---------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `xero_tenant_id`      |    ✓     | Xero identifier for Tenant                                                         | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                 |
+| `accounts`            |    ✗     |                                                                                    | `[{"account_id": "00000000-0000-0000-0000-000000000000", "code": "4400", "has_attachments": False, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}]` |
+| `conversion_balances` |    ✗     | Balance supplied for each account that has a value as at the conversion date.      | `[{}]`                                                                                                                                                                  |
+| `conversion_date`     |    ✗     |                                                                                    | `{"month": 1, "year": 2020}`                                                                                                                                            |
+| `└─ month`            |    ✗     | The month the organisation starts using Xero. Value is an integer between 1 and 12 | `1`                                                                                                                                                                     |
+| `└─ year`             |    ✗     | The year the organisation starts using Xero. Value is an integer greater than 2006 | `2020`                                                                                                                                                                  |
 
 #### Synchronous Client
 
@@ -23,12 +23,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.setup.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     accounts=[
@@ -70,12 +65,7 @@ res = client.setup.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.setup.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     accounts=[

@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.tracking_categories.options.delete(
     tracking_category_id="00000000-0000-0000-0000-000000000000",
     tracking_option_id="00000000-0000-0000-0000-000000000000",
@@ -39,12 +34,7 @@ res = client.tracking_categories.options.delete(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.tracking_categories.options.delete(
     tracking_category_id="00000000-0000-0000-0000-000000000000",
     tracking_option_id="00000000-0000-0000-0000-000000000000",
@@ -86,12 +76,7 @@ res = await client.tracking_categories.options.delete(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.tracking_categories.options.update(
     tracking_category_id_path="00000000-0000-0000-0000-000000000000",
     tracking_option_id_path="00000000-0000-0000-0000-000000000000",
@@ -105,12 +90,7 @@ res = client.tracking_categories.options.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.tracking_categories.options.update(
     tracking_category_id_path="00000000-0000-0000-0000-000000000000",
     tracking_option_id_path="00000000-0000-0000-0000-000000000000",
@@ -151,12 +131,7 @@ res = await client.tracking_categories.options.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.tracking_categories.options.create(
     tracking_category_id_path="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -169,12 +144,7 @@ res = client.tracking_categories.options.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.tracking_categories.options.create(
     tracking_category_id_path="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",

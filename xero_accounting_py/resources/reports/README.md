@@ -18,12 +18,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 ```
 
@@ -33,12 +28,7 @@ res = client.reports.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 ```
 
@@ -74,12 +64,7 @@ res = await client.reports.list(xero_tenant_id="YOUR_XERO_TENANT_ID")
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_aged_payables_by_contact(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -95,12 +80,7 @@ res = client.reports.get_aged_payables_by_contact(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_aged_payables_by_contact(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -142,12 +122,7 @@ res = await client.reports.get_aged_payables_by_contact(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_aged_receivables_by_contact(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -163,12 +138,7 @@ res = client.reports.get_aged_receivables_by_contact(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_aged_receivables_by_contact(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -213,12 +183,7 @@ res = await client.reports.get_aged_receivables_by_contact(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_balance_sheet(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     date="2019-11-01",
@@ -237,12 +202,7 @@ res = client.reports.get_balance_sheet(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_balance_sheet(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     date="2019-11-01",
@@ -285,12 +245,7 @@ res = await client.reports.get_balance_sheet(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_bank_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", from_date="2019-10-31", to_date="2019-10-31"
 )
@@ -302,12 +257,7 @@ res = client.reports.get_bank_summary(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_bank_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", from_date="2019-10-31", to_date="2019-10-31"
 )
@@ -344,12 +294,7 @@ res = await client.reports.get_bank_summary(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_budget_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-03-31", periods=2, timeframe=3
 )
@@ -361,12 +306,7 @@ res = client.reports.get_budget_summary(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_budget_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-03-31", periods=2, timeframe=3
 )
@@ -401,12 +341,7 @@ res = await client.reports.get_budget_summary(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_executive_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-03-31"
 )
@@ -418,12 +353,7 @@ res = client.reports.get_executive_summary(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_executive_summary(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-03-31"
 )
@@ -451,7 +381,7 @@ res = await client.reports.get_executive_summary(
 | ----------------------- | :------: | ----------------------------------------------------------- | ---------------------------------------- |
 | `xero_tenant_id`        |    ✓     | Xero identifier for Tenant                                  | `"YOUR_XERO_TENANT_ID"`                  |
 | `from_date`             |    ✗     | filter by the from date of the report e.g. 2021-02-01       | `"2019-10-31"`                           |
-| `payments_only`         |    ✗     | Return cash only basis for the ProfitAndLoss report         | `True`                                   |
+| `payments_only`         |    ✗     | Return cash only basis for the ProfitAndLoss report         | `False`                                  |
 | `periods`               |    ✗     | The number of periods to compare (integer between 1 and 12) | `3`                                      |
 | `standard_layout`       |    ✗     | Return the standard layout for the ProfitAndLoss report     | `True`                                   |
 | `timeframe`             |    ✗     | The period size to compare to (MONTH, QUARTER, YEAR)        | `"MONTH"`                                |
@@ -467,16 +397,11 @@ res = await client.reports.get_executive_summary(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_profit_and_loss(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     from_date="2019-10-31",
-    payments_only=True,
+    payments_only=False,
     periods=3,
     standard_layout=True,
     timeframe="MONTH",
@@ -494,16 +419,11 @@ res = client.reports.get_profit_and_loss(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_profit_and_loss(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     from_date="2019-10-31",
-    payments_only=True,
+    payments_only=False,
     periods=3,
     standard_layout=True,
     timeframe="MONTH",
@@ -544,12 +464,7 @@ res = await client.reports.get_profit_and_loss(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_ten_ninety_nine(
     xero_tenant_id="YOUR_XERO_TENANT_ID", report_year="2019"
 )
@@ -561,12 +476,7 @@ res = client.reports.get_ten_ninety_nine(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_ten_ninety_nine(
     xero_tenant_id="YOUR_XERO_TENANT_ID", report_year="2019"
 )
@@ -602,12 +512,7 @@ res = await client.reports.get_ten_ninety_nine(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get_trial_balance(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-10-31", payments_only=True
 )
@@ -619,12 +524,7 @@ res = client.reports.get_trial_balance(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get_trial_balance(
     xero_tenant_id="YOUR_XERO_TENANT_ID", date="2019-10-31", payments_only=True
 )
@@ -659,12 +559,7 @@ res = await client.reports.get_trial_balance(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.reports.get(
     report_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -677,12 +572,7 @@ res = client.reports.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.reports.get(
     report_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",

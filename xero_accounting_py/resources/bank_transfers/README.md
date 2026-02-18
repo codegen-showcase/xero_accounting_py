@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.bank_transfers.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Amount ASC",
@@ -39,12 +34,7 @@ res = client.bank_transfers.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.bank_transfers.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     order="Amount ASC",
@@ -81,12 +71,7 @@ res = await client.bank_transfers.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.bank_transfers.get(
     bank_transfer_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -99,12 +84,7 @@ res = client.bank_transfers.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.bank_transfers.get(
     bank_transfer_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -129,10 +109,10 @@ res = await client.bank_transfers.get(
 
 #### Parameters
 
-| Parameter        | Required | Description                | Example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------- | :------: | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `xero_tenant_id` |    ✓     | Xero identifier for Tenant | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `bank_transfers` |    ✗     |                            | `[{"amount": 123.0, "created_date_utc": "/Date(1573755038314)/", "from_bank_account": {"account_id": "00000000-0000-0000-0000-000000000000", "code": "string", "has_attachments": True, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}, "from_is_reconciled": True, "has_attachments": True, "to_bank_account": {"account_id": "00000000-0000-0000-0000-000000000000", "code": "string", "has_attachments": True, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}, "to_is_reconciled": True}]` |
+| Parameter        | Required | Description                | Example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------- | :------: | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `xero_tenant_id` |    ✓     | Xero identifier for Tenant | `"YOUR_XERO_TENANT_ID"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `bank_transfers` |    ✗     |                            | `[{"amount": 123.0, "created_date_utc": "/Date(1573755038314)/", "from_bank_account": {"account_id": "00000000-0000-0000-0000-000000000000", "code": "4400", "has_attachments": False, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}, "from_is_reconciled": False, "has_attachments": False, "to_bank_account": {"account_id": "00000000-0000-0000-0000-000000000000", "code": "4400", "has_attachments": False, "name": "Food Sales", "updated_date_utc": "/Date(1573755038314)/"}, "to_is_reconciled": False}]` |
 
 #### Synchronous Client
 
@@ -140,17 +120,12 @@ res = await client.bank_transfers.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.bank_transfers.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     bank_transfers=[
         {
-            "amount": 123.0,
+            "amount": 50.0,
             "from_bank_account": {
                 "account_id": "00000000-0000-0000-0000-000000000000",
                 "bank_account_number": "123455",
@@ -201,17 +176,12 @@ res = client.bank_transfers.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.bank_transfers.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     bank_transfers=[
         {
-            "amount": 123.0,
+            "amount": 50.0,
             "from_bank_account": {
                 "account_id": "00000000-0000-0000-0000-000000000000",
                 "bank_account_number": "123455",

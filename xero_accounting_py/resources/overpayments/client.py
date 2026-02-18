@@ -40,6 +40,9 @@ class OverpaymentsClient:
         page_size: typing.Union[
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
+        references: typing.Union[
+            typing.Optional[typing.List[str]], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
         unitdp: typing.Union[
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
@@ -57,6 +60,7 @@ class OverpaymentsClient:
             order: Order by an any element
             page: e.g. page=1 – Up to 100 overpayments will be returned in a single API call with line items shown for each overpayment
             page_size: Number of records to retrieve per page
+            references: Filter by a comma-separated list of References
             unitdp: e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts
             where: Filter by an any element
             xero_tenant_id: Xero identifier for Tenant
@@ -106,6 +110,14 @@ class OverpaymentsClient:
                 to_encodable(item=page_size, dump_with=int),
                 style="form",
                 explode=True,
+            )
+        if not isinstance(references, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "References",
+                to_encodable(item=references, dump_with=typing.List[str]),
+                style="form",
+                explode=False,
             )
         if not isinstance(unitdp, type_utils.NotGiven):
             encode_query_param(
@@ -199,6 +211,9 @@ class AsyncOverpaymentsClient:
         page_size: typing.Union[
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
+        references: typing.Union[
+            typing.Optional[typing.List[str]], type_utils.NotGiven
+        ] = type_utils.NOT_GIVEN,
         unitdp: typing.Union[
             typing.Optional[int], type_utils.NotGiven
         ] = type_utils.NOT_GIVEN,
@@ -216,6 +231,7 @@ class AsyncOverpaymentsClient:
             order: Order by an any element
             page: e.g. page=1 – Up to 100 overpayments will be returned in a single API call with line items shown for each overpayment
             page_size: Number of records to retrieve per page
+            references: Filter by a comma-separated list of References
             unitdp: e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts
             where: Filter by an any element
             xero_tenant_id: Xero identifier for Tenant
@@ -265,6 +281,14 @@ class AsyncOverpaymentsClient:
                 to_encodable(item=page_size, dump_with=int),
                 style="form",
                 explode=True,
+            )
+        if not isinstance(references, type_utils.NotGiven):
+            encode_query_param(
+                _query,
+                "References",
+                to_encodable(item=references, dump_with=typing.List[str]),
+                style="form",
+                explode=False,
             )
         if not isinstance(unitdp, type_utils.NotGiven):
             encode_query_param(

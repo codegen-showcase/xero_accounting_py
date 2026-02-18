@@ -646,7 +646,7 @@ class ReportsClient:
         client.reports.get_profit_and_loss(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             from_date="2019-10-31",
-            payments_only=True,
+            payments_only=False,
             periods=3,
             standard_layout=True,
             timeframe="MONTH",
@@ -1550,7 +1550,7 @@ class AsyncReportsClient:
         await client.reports.get_profit_and_loss(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             from_date="2019-10-31",
-            payments_only=True,
+            payments_only=False,
             periods=3,
             standard_layout=True,
             timeframe="MONTH",

@@ -6,7 +6,7 @@ class Environment(enum.Enum):
     """Pre-defined base URLs for the API"""
 
     ENVIRONMENT = "https://api.xero.com/api.xro/2.0"
-    MOCK_SERVER = "https://api.sideko.dev/v1/mock/public/xero-accounting/0.1.0"
+    MOCK_SERVER = "https://api.sideko.dev/v1/mock/public/xero-accounting/0.1.3"
 
 
 def _get_base_url(

@@ -24,12 +24,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.purchase_orders.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     date_from="2019-12-01",
@@ -47,12 +42,7 @@ res = client.purchase_orders.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.purchase_orders.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     date_from="2019-12-01",
@@ -93,12 +83,7 @@ res = await client.purchase_orders.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.purchase_orders.get(
     purchase_order_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -111,72 +96,10 @@ res = client.purchase_orders.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.purchase_orders.get(
     purchase_order_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-)
-```
-
-#### Response
-
-##### Type
-
-[PurchaseOrders](/xero_accounting_py/types/models/purchase_orders.py)
-
-##### Example
-
-```python
-{}
-```
-
-### Retrieves a specific purchase order using purchase order number <a name="get_by_number"></a>
-
-**API Endpoint**: `GET /PurchaseOrders/{PurchaseOrderNumber}`
-
-#### Parameters
-
-| Parameter               | Required | Description                           | Example                 |
-| ----------------------- | :------: | ------------------------------------- | ----------------------- |
-| `purchase_order_number` |    ✓     | Unique identifier for a PurchaseOrder | `"PO1234"`              |
-| `xero_tenant_id`        |    ✓     | Xero identifier for Tenant            | `"YOUR_XERO_TENANT_ID"` |
-
-#### Synchronous Client
-
-```python
-from os import getenv
-from xero_accounting_py import Client
-
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
-res = client.purchase_orders.get_by_number(
-    purchase_order_number="PO1234", xero_tenant_id="YOUR_XERO_TENANT_ID"
-)
-```
-
-#### Asynchronous Client
-
-```python
-from os import getenv
-from xero_accounting_py import AsyncClient
-
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
-res = await client.purchase_orders.get_by_number(
-    purchase_order_number="PO1234", xero_tenant_id="YOUR_XERO_TENANT_ID"
 )
 ```
 
@@ -216,12 +139,7 @@ res = await client.purchase_orders.get_by_number(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.purchase_orders.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     purchase_orders=[
@@ -247,12 +165,7 @@ res = client.purchase_orders.update_or_create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.purchase_orders.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     purchase_orders=[
@@ -308,12 +221,7 @@ res = await client.purchase_orders.update_or_create(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.purchase_orders.update(
     purchase_order_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -338,12 +246,7 @@ res = client.purchase_orders.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.purchase_orders.update(
     purchase_order_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -398,12 +301,7 @@ res = await client.purchase_orders.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.purchase_orders.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     purchase_orders=[
@@ -429,12 +327,7 @@ res = client.purchase_orders.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.purchase_orders.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     purchase_orders=[

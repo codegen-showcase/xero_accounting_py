@@ -203,49 +203,6 @@ class PurchaseOrdersClient:
             request_options=request_options or default_request_options(),
         )
 
-    def get_by_number(
-        self,
-        *,
-        purchase_order_number: str,
-        xero_tenant_id: str,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.PurchaseOrders:
-        """
-        Retrieves a specific purchase order using purchase order number
-
-        GET /PurchaseOrders/{PurchaseOrderNumber}
-
-        Args:
-            purchase_order_number: Unique identifier for a PurchaseOrder
-            xero_tenant_id: Xero identifier for Tenant
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Success - return response of type PurchaseOrder array for specified PurchaseOrder
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        client.purchase_orders.get_by_number(
-            purchase_order_number="PO1234", xero_tenant_id="YOUR_XERO_TENANT_ID"
-        )
-        ```
-        """
-        models.PurchaseOrders.model_rebuild(_types_namespace=models._types_namespace)
-        _header: typing.Dict[str, str] = {}
-        _header["xero-tenant-id"] = str(xero_tenant_id)
-        return self._base_client.request(
-            method="GET",
-            path=f"/PurchaseOrders/{purchase_order_number}",
-            auth_names=["OAuth2"],
-            headers=_header,
-            cast_to=models.PurchaseOrders,
-            request_options=request_options or default_request_options(),
-        )
-
     def update_or_create(
         self,
         *,
@@ -688,49 +645,6 @@ class AsyncPurchaseOrdersClient:
         return await self._base_client.request(
             method="GET",
             path=f"/PurchaseOrders/{purchase_order_id}",
-            auth_names=["OAuth2"],
-            headers=_header,
-            cast_to=models.PurchaseOrders,
-            request_options=request_options or default_request_options(),
-        )
-
-    async def get_by_number(
-        self,
-        *,
-        purchase_order_number: str,
-        xero_tenant_id: str,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.PurchaseOrders:
-        """
-        Retrieves a specific purchase order using purchase order number
-
-        GET /PurchaseOrders/{PurchaseOrderNumber}
-
-        Args:
-            purchase_order_number: Unique identifier for a PurchaseOrder
-            xero_tenant_id: Xero identifier for Tenant
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Success - return response of type PurchaseOrder array for specified PurchaseOrder
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        await client.purchase_orders.get_by_number(
-            purchase_order_number="PO1234", xero_tenant_id="YOUR_XERO_TENANT_ID"
-        )
-        ```
-        """
-        models.PurchaseOrders.model_rebuild(_types_namespace=models._types_namespace)
-        _header: typing.Dict[str, str] = {}
-        _header["xero-tenant-id"] = str(xero_tenant_id)
-        return await self._base_client.request(
-            method="GET",
-            path=f"/PurchaseOrders/{purchase_order_number}",
             auth_names=["OAuth2"],
             headers=_header,
             cast_to=models.PurchaseOrders,

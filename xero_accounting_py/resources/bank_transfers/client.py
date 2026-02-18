@@ -170,7 +170,7 @@ class BankTransfersClient:
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             bank_transfers=[
                 {
-                    "amount": 123.0,
+                    "amount": 50.0,
                     "from_bank_account": {
                         "account_id": "00000000-0000-0000-0000-000000000000",
                         "bank_account_number": "123455",
@@ -381,7 +381,7 @@ class AsyncBankTransfersClient:
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             bank_transfers=[
                 {
-                    "amount": 123.0,
+                    "amount": 50.0,
                     "from_bank_account": {
                         "account_id": "00000000-0000-0000-0000-000000000000",
                         "bank_account_number": "123455",

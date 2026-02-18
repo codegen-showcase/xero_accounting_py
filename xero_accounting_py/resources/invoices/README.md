@@ -8,22 +8,22 @@
 
 #### Parameters
 
-| Parameter           | Required | Description                                                                                                                                                                                                                                            | Example                                                |
-| ------------------- | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `xero_tenant_id`    |    ✓     | Xero identifier for Tenant                                                                                                                                                                                                                             | `"YOUR_XERO_TENANT_ID"`                                |
-| `contact_i_ds`      |    ✗     | Filter by a comma-separated list of ContactIDs.                                                                                                                                                                                                        | `["&quot;00000000-0000-0000-0000-000000000000&quot;"]` |
-| `created_by_my_app` |    ✗     | When set to true you'll only retrieve Invoices created by your app                                                                                                                                                                                     | `False`                                                |
-| `i_ds`              |    ✗     | Filter by a comma-separated list of InvoicesIDs.                                                                                                                                                                                                       | `["&quot;00000000-0000-0000-0000-000000000000&quot;"]` |
-| `include_archived`  |    ✗     | e.g. includeArchived=true - Invoices with a status of ARCHIVED will be included in the response                                                                                                                                                        | `True`                                                 |
-| `invoice_numbers`   |    ✗     | Filter by a comma-separated list of InvoiceNumbers.                                                                                                                                                                                                    | `["&quot;INV-001&quot;, &quot;INV-002&quot;"]`         |
-| `order`             |    ✗     | Order by an any element                                                                                                                                                                                                                                | `"InvoiceNumber ASC"`                                  |
-| `page`              |    ✗     | e.g. page=1 – Up to 100 invoices will be returned in a single API call with line items shown for each invoice                                                                                                                                          | `1`                                                    |
-| `page_size`         |    ✗     | Number of records to retrieve per page                                                                                                                                                                                                                 | `100`                                                  |
-| `search_term`       |    ✗     | Search parameter that performs a case-insensitive text search across the fields e.g. InvoiceNumber, Reference.                                                                                                                                         | `"SearchTerm=REF12"`                                   |
-| `statuses`          |    ✗     | Filter by a comma-separated list Statuses. For faster response times we recommend using these explicit parameters instead of passing OR conditions into the Where filter.                                                                              | `["&quot;DRAFT&quot;, &quot;SUBMITTED&quot;"]`         |
-| `summary_only`      |    ✗     | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. | `True`                                                 |
-| `unitdp`            |    ✗     | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts                                                                                                                                                       | `4`                                                    |
-| `where`             |    ✗     | Filter by an any element                                                                                                                                                                                                                               | `"Status==\"DRAFT\""`                                  |
+| Parameter           | Required | Description                                                                                                                                                                                                                                            | Example                                    |
+| ------------------- | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| `xero_tenant_id`    |    ✓     | Xero identifier for Tenant                                                                                                                                                                                                                             | `"YOUR_XERO_TENANT_ID"`                    |
+| `contact_i_ds`      |    ✗     | Filter by a comma-separated list of ContactIDs.                                                                                                                                                                                                        | `["3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a"]` |
+| `created_by_my_app` |    ✗     | When set to true you'll only retrieve Invoices created by your app                                                                                                                                                                                     | `False`                                    |
+| `i_ds`              |    ✗     | Filter by a comma-separated list of InvoicesIDs.                                                                                                                                                                                                       | `["3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a"]` |
+| `include_archived`  |    ✗     | e.g. includeArchived=true - Invoices with a status of ARCHIVED will be included in the response                                                                                                                                                        | `True`                                     |
+| `invoice_numbers`   |    ✗     | Filter by a comma-separated list of InvoiceNumbers.                                                                                                                                                                                                    | `["string"]`                               |
+| `order`             |    ✗     | Order by an any element                                                                                                                                                                                                                                | `"InvoiceNumber ASC"`                      |
+| `page`              |    ✗     | e.g. page=1 – Up to 100 invoices will be returned in a single API call with line items shown for each invoice                                                                                                                                          | `1`                                        |
+| `page_size`         |    ✗     | Number of records to retrieve per page                                                                                                                                                                                                                 | `100`                                      |
+| `search_term`       |    ✗     | Search parameter that performs a case-insensitive text search across the fields e.g. InvoiceNumber, Reference.                                                                                                                                         | `"SearchTerm=REF12"`                       |
+| `statuses`          |    ✗     | Filter by a comma-separated list Statuses. For faster response times we recommend using these explicit parameters instead of passing OR conditions into the Where filter.                                                                              | `["string"]`                               |
+| `summary_only`      |    ✗     | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. | `True`                                     |
+| `unitdp`            |    ✗     | e.g. unitdp=4 – (Unit Decimal Places) You can opt in to use four decimal places for unit amounts                                                                                                                                                       | `4`                                        |
+| `where`             |    ✗     | Filter by an any element                                                                                                                                                                                                                               | `"Status==\"DRAFT\""`                      |
 
 #### Synchronous Client
 
@@ -31,24 +31,15 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.invoices.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-    contact_i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     created_by_my_app=False,
-    i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     include_archived=True,
-    invoice_numbers=["&quot;INV-001&quot;, &quot;INV-002&quot;"],
     order="InvoiceNumber ASC",
     page=1,
     page_size=100,
     search_term="SearchTerm=REF12",
-    statuses=["&quot;DRAFT&quot;, &quot;SUBMITTED&quot;"],
     summary_only=True,
     unitdp=4,
     where='Status=="DRAFT"',
@@ -61,24 +52,15 @@ res = client.invoices.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.invoices.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-    contact_i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     created_by_my_app=False,
-    i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     include_archived=True,
-    invoice_numbers=["&quot;INV-001&quot;, &quot;INV-002&quot;"],
     order="InvoiceNumber ASC",
     page=1,
     page_size=100,
     search_term="SearchTerm=REF12",
-    statuses=["&quot;DRAFT&quot;, &quot;SUBMITTED&quot;"],
     summary_only=True,
     unitdp=4,
     where='Status=="DRAFT"',
@@ -115,12 +97,7 @@ res = await client.invoices.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.invoices.get(
     invoice_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -134,12 +111,7 @@ res = client.invoices.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.invoices.get(
     invoice_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -184,12 +156,7 @@ res = await client.invoices.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.invoices.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     invoices=[
@@ -222,12 +189,7 @@ res = client.invoices.update_or_create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.invoices.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     invoices=[
@@ -291,12 +253,7 @@ res = await client.invoices.update_or_create(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.invoices.update(
     invoice_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -324,12 +281,7 @@ res = client.invoices.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.invoices.update(
     invoice_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -388,12 +340,7 @@ res = await client.invoices.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.invoices.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     invoices=[
@@ -426,12 +373,7 @@ res = client.invoices.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.invoices.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     invoices=[

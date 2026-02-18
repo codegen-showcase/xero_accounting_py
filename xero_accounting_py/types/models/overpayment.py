@@ -255,6 +255,10 @@ class Overpayment(pydantic.BaseModel):
     """
     See Payments
     """
+    reference: typing.Optional[str] = pydantic.Field(alias="Reference", default=None)
+    """
+    An optional description for Overpayment
+    """
     remaining_credit: typing.Optional[float] = pydantic.Field(
         alias="RemainingCredit", default=None
     )

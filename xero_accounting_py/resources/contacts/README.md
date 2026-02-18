@@ -8,17 +8,17 @@
 
 #### Parameters
 
-| Parameter          | Required | Description                                                                                                                                                                                                                                            | Example                                                |
-| ------------------ | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
-| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                                                                                                                                                                             | `"YOUR_XERO_TENANT_ID"`                                |
-| `i_ds`             |    ✗     | Filter by a comma separated list of ContactIDs. Allows you to retrieve a specific set of contacts in a single call.                                                                                                                                    | `["&quot;00000000-0000-0000-0000-000000000000&quot;"]` |
-| `include_archived` |    ✗     | e.g. includeArchived=true - Contacts with a status of ARCHIVED will be included in the response                                                                                                                                                        | `True`                                                 |
-| `order`            |    ✗     | Order by an any element                                                                                                                                                                                                                                | `"Name ASC"`                                           |
-| `page`             |    ✗     | e.g. page=1 - Up to 100 contacts will be returned in a single API call.                                                                                                                                                                                | `1`                                                    |
-| `page_size`        |    ✗     | Number of records to retrieve per page                                                                                                                                                                                                                 | `100`                                                  |
-| `search_term`      |    ✗     | Search parameter that performs a case-insensitive text search across the Name, FirstName, LastName, ContactNumber and EmailAddress fields.                                                                                                             | `"Joe Bloggs"`                                         |
-| `summary_only`     |    ✗     | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. | `True`                                                 |
-| `where`            |    ✗     | Filter by an any element                                                                                                                                                                                                                               | `"ContactStatus==&quot;ACTIVE&quot;"`                  |
+| Parameter          | Required | Description                                                                                                                                                                                                                                            | Example                                    |
+| ------------------ | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| `xero_tenant_id`   |    ✓     | Xero identifier for Tenant                                                                                                                                                                                                                             | `"YOUR_XERO_TENANT_ID"`                    |
+| `i_ds`             |    ✗     | Filter by a comma separated list of ContactIDs. Allows you to retrieve a specific set of contacts in a single call.                                                                                                                                    | `["3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a"]` |
+| `include_archived` |    ✗     | e.g. includeArchived=true - Contacts with a status of ARCHIVED will be included in the response                                                                                                                                                        | `True`                                     |
+| `order`            |    ✗     | Order by an any element                                                                                                                                                                                                                                | `"Name ASC"`                               |
+| `page`             |    ✗     | e.g. page=1 - Up to 100 contacts will be returned in a single API call.                                                                                                                                                                                | `1`                                        |
+| `page_size`        |    ✗     | Number of records to retrieve per page                                                                                                                                                                                                                 | `100`                                      |
+| `search_term`      |    ✗     | Search parameter that performs a case-insensitive text search across the Name, FirstName, LastName, ContactNumber and EmailAddress fields.                                                                                                             | `"Joe Bloggs"`                             |
+| `summary_only`     |    ✗     | Use summaryOnly=true in GET Contacts and Invoices endpoint to retrieve a smaller version of the response object. This returns only lightweight fields, excluding computation-heavy fields from the response, making the API calls quick and efficient. | `True`                                     |
+| `where`            |    ✗     | Filter by an any element                                                                                                                                                                                                                               | `"ContactStatus==&quot;ACTIVE&quot;"`      |
 
 #### Synchronous Client
 
@@ -26,15 +26,9 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.contacts.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-    i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     include_archived=True,
     order="Name ASC",
     page=1,
@@ -51,15 +45,9 @@ res = client.contacts.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.contacts.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-    i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
     include_archived=True,
     order="Name ASC",
     page=1,
@@ -99,12 +87,7 @@ res = await client.contacts.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.contacts.get(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -117,72 +100,10 @@ res = client.contacts.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.contacts.get(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
-)
-```
-
-#### Response
-
-##### Type
-
-[Contacts](/xero_accounting_py/types/models/contacts.py)
-
-##### Example
-
-```python
-{}
-```
-
-### Retrieves a specific contact by contact number in a Xero organisation <a name="get_by_contact_number"></a>
-
-**API Endpoint**: `GET /Contacts/{ContactNumber}`
-
-#### Parameters
-
-| Parameter        | Required | Description                                                                                                          | Example                 |
-| ---------------- | :------: | -------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| `contact_number` |    ✓     | This field is read only on the Xero contact screen, used to identify contacts in external systems (max length = 50). | `"SB2"`                 |
-| `xero_tenant_id` |    ✓     | Xero identifier for Tenant                                                                                           | `"YOUR_XERO_TENANT_ID"` |
-
-#### Synchronous Client
-
-```python
-from os import getenv
-from xero_accounting_py import Client
-
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
-res = client.contacts.get_by_contact_number(
-    contact_number="SB2", xero_tenant_id="YOUR_XERO_TENANT_ID"
-)
-```
-
-#### Asynchronous Client
-
-```python
-from os import getenv
-from xero_accounting_py import AsyncClient
-
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
-res = await client.contacts.get_by_contact_number(
-    contact_number="SB2", xero_tenant_id="YOUR_XERO_TENANT_ID"
 )
 ```
 
@@ -222,12 +143,7 @@ res = await client.contacts.get_by_contact_number(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.contacts.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     contacts=[
@@ -257,12 +173,7 @@ res = client.contacts.update_or_create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.contacts.update_or_create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     contacts=[
@@ -322,12 +233,7 @@ res = await client.contacts.update_or_create(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.contacts.update(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -341,12 +247,7 @@ res = client.contacts.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.contacts.update(
     contact_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -390,12 +291,7 @@ res = await client.contacts.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.contacts.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     contacts=[
@@ -469,12 +365,7 @@ res = client.contacts.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.contacts.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     contacts=[

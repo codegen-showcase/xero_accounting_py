@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.currencies.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID", order="Code ASC", where='Code=="USD"'
 )
@@ -37,12 +32,7 @@ res = client.currencies.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.currencies.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID", order="Code ASC", where='Code=="USD"'
 )
@@ -78,12 +68,7 @@ res = await client.currencies.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.currencies.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID", code="USD", description="United States Dollar"
 )
@@ -95,12 +80,7 @@ res = client.currencies.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.currencies.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID", code="USD", description="United States Dollar"
 )

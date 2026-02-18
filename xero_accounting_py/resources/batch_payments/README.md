@@ -20,12 +20,7 @@
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.batch_payments.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID", order="Date ASC", where='Status=="AUTHORISED"'
 )
@@ -37,12 +32,7 @@ res = client.batch_payments.list(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.batch_payments.list(
     xero_tenant_id="YOUR_XERO_TENANT_ID", order="Date ASC", where='Status=="AUTHORISED"'
 )
@@ -77,12 +67,7 @@ res = await client.batch_payments.list(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.batch_payments.get(
     batch_payment_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -95,12 +80,7 @@ res = client.batch_payments.get(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.batch_payments.get(
     batch_payment_id="00000000-0000-0000-0000-000000000000",
     xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -137,12 +117,7 @@ res = await client.batch_payments.get(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.batch_payments.delete(
     batch_payment_id="9bf296e9-0748-4d29-a3dc-24dde1098030",
     status="DELETED",
@@ -156,12 +131,7 @@ res = client.batch_payments.delete(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.batch_payments.delete(
     batch_payment_id="9bf296e9-0748-4d29-a3dc-24dde1098030",
     status="DELETED",
@@ -199,12 +169,7 @@ res = await client.batch_payments.delete(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.batch_payments.update(
     batch_payment_id="00000000-0000-0000-0000-000000000000",
     status="DELETED",
@@ -218,12 +183,7 @@ res = client.batch_payments.update(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.batch_payments.update(
     batch_payment_id="00000000-0000-0000-0000-000000000000",
     status="DELETED",
@@ -261,12 +221,7 @@ res = await client.batch_payments.update(
 from os import getenv
 from xero_accounting_py import Client
 
-client = Client(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = Client(oauth_token=getenv("API_TOKEN"))
 res = client.batch_payments.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     batch_payments=[
@@ -286,12 +241,7 @@ res = client.batch_payments.create(
 from os import getenv
 from xero_accounting_py import AsyncClient
 
-client = AsyncClient(
-    oauth={
-        "client_id": getenv("OAUTH_CLIENT_ID"),
-        "client_secret": getenv("OAUTH_CLIENT_SECRET"),
-    }
-)
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
 res = await client.batch_payments.create(
     xero_tenant_id="YOUR_XERO_TENANT_ID",
     batch_payments=[

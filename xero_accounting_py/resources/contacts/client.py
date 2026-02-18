@@ -90,7 +90,6 @@ class ContactsClient:
         ```py
         client.contacts.list(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
-            i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             include_archived=True,
             order="Name ASC",
             page=1,
@@ -217,49 +216,6 @@ class ContactsClient:
         return self._base_client.request(
             method="GET",
             path=f"/Contacts/{contact_id}",
-            auth_names=["OAuth2"],
-            headers=_header,
-            cast_to=models.Contacts,
-            request_options=request_options or default_request_options(),
-        )
-
-    def get_by_contact_number(
-        self,
-        *,
-        contact_number: str,
-        xero_tenant_id: str,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.Contacts:
-        """
-        Retrieves a specific contact by contact number in a Xero organisation
-
-        GET /Contacts/{ContactNumber}
-
-        Args:
-            contact_number: This field is read only on the Xero contact screen, used to identify contacts in external systems (max length = 50).
-            xero_tenant_id: Xero identifier for Tenant
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Success - return response of type Contacts array with a unique Contact
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        client.contacts.get_by_contact_number(
-            contact_number="SB2", xero_tenant_id="YOUR_XERO_TENANT_ID"
-        )
-        ```
-        """
-        models.Contacts.model_rebuild(_types_namespace=models._types_namespace)
-        _header: typing.Dict[str, str] = {}
-        _header["xero-tenant-id"] = str(xero_tenant_id)
-        return self._base_client.request(
-            method="GET",
-            path=f"/Contacts/{contact_number}",
             auth_names=["OAuth2"],
             headers=_header,
             cast_to=models.Contacts,
@@ -629,7 +585,6 @@ class AsyncContactsClient:
         ```py
         await client.contacts.list(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
-            i_ds=["&quot;00000000-0000-0000-0000-000000000000&quot;"],
             include_archived=True,
             order="Name ASC",
             page=1,
@@ -756,49 +711,6 @@ class AsyncContactsClient:
         return await self._base_client.request(
             method="GET",
             path=f"/Contacts/{contact_id}",
-            auth_names=["OAuth2"],
-            headers=_header,
-            cast_to=models.Contacts,
-            request_options=request_options or default_request_options(),
-        )
-
-    async def get_by_contact_number(
-        self,
-        *,
-        contact_number: str,
-        xero_tenant_id: str,
-        request_options: typing.Optional[RequestOptions] = None,
-    ) -> models.Contacts:
-        """
-        Retrieves a specific contact by contact number in a Xero organisation
-
-        GET /Contacts/{ContactNumber}
-
-        Args:
-            contact_number: This field is read only on the Xero contact screen, used to identify contacts in external systems (max length = 50).
-            xero_tenant_id: Xero identifier for Tenant
-            request_options: Additional options to customize the HTTP request
-
-        Returns:
-            Success - return response of type Contacts array with a unique Contact
-
-        Raises:
-            ApiError: A custom exception class that provides additional context
-                for API errors, including the HTTP status code and response body.
-
-        Examples:
-        ```py
-        await client.contacts.get_by_contact_number(
-            contact_number="SB2", xero_tenant_id="YOUR_XERO_TENANT_ID"
-        )
-        ```
-        """
-        models.Contacts.model_rebuild(_types_namespace=models._types_namespace)
-        _header: typing.Dict[str, str] = {}
-        _header["xero-tenant-id"] = str(xero_tenant_id)
-        return await self._base_client.request(
-            method="GET",
-            path=f"/Contacts/{contact_number}",
             auth_names=["OAuth2"],
             headers=_header,
             cast_to=models.Contacts,

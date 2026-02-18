@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "xero_accounting_py"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 readme = "README.md"
 authors = []
 packages = [{ include = "xero_accounting_py" }]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.14"
+python = "^3.8"
 make-api-request = "^0.1.3"
 
 [tool.poetry.dev-dependencies]

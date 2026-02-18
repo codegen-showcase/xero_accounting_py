@@ -304,7 +304,7 @@ class ManualJournalsClient:
                 {
                     "journal_lines": [
                         {
-                            "account_code": "string",
+                            "account_code": "720",
                             "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                             "is_blank": False,
                             "line_amount": -2569.0,
@@ -717,7 +717,7 @@ class AsyncManualJournalsClient:
                 {
                     "journal_lines": [
                         {
-                            "account_code": "string",
+                            "account_code": "720",
                             "description": "Coded incorrectly Office Equipment should be Computer Equipment",
                             "is_blank": False,
                             "line_amount": -2569.0,

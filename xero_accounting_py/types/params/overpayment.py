@@ -246,6 +246,11 @@ class Overpayment(typing_extensions.TypedDict):
     See Payments
     """
 
+    reference: typing_extensions.NotRequired[str]
+    """
+    An optional description for Overpayment
+    """
+
     remaining_credit: typing_extensions.NotRequired[float]
     """
     The remaining credit balance on the overpayment
@@ -501,6 +506,7 @@ class _SerializerOverpayment(pydantic.BaseModel):
     payments: typing.Optional[typing.List["_SerializerPayment"]] = pydantic.Field(
         alias="Payments", default=None
     )
+    reference: typing.Optional[str] = pydantic.Field(alias="Reference", default=None)
     remaining_credit: typing.Optional[float] = pydantic.Field(
         alias="RemainingCredit", default=None
     )

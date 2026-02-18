@@ -314,8 +314,8 @@ class PaymentsClient:
         client.payments.create_1(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             batch_payment_id="00000000-0000-0000-0000-000000000000",
-            has_account=True,
-            has_validation_errors=True,
+            has_account=False,
+            has_validation_errors=False,
             payment_id="00000000-0000-0000-0000-000000000000",
             updated_date_utc="/Date(1573755038314)/",
         )
@@ -797,8 +797,8 @@ class AsyncPaymentsClient:
         await client.payments.create_1(
             xero_tenant_id="YOUR_XERO_TENANT_ID",
             batch_payment_id="00000000-0000-0000-0000-000000000000",
-            has_account=True,
-            has_validation_errors=True,
+            has_account=False,
+            has_validation_errors=False,
             payment_id="00000000-0000-0000-0000-000000000000",
             updated_date_utc="/Date(1573755038314)/",
         )

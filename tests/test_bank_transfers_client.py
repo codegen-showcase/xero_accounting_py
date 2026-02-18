@@ -25,14 +25,7 @@ def test_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.bank_transfers.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         bank_transfers=[
@@ -48,11 +41,11 @@ def test_create_200_success_all_params() -> None:
                     "bank_account_number": "string",
                     "bank_account_type": "BANK",
                     "class_": "ASSET",
-                    "code": "string",
+                    "code": "4400",
                     "currency_code": "AED",
                     "description": "string",
                     "enable_payments_to_account": True,
-                    "has_attachments": True,
+                    "has_attachments": False,
                     "name": "Food Sales",
                     "reporting_code": "string",
                     "reporting_code_name": "string",
@@ -65,8 +58,8 @@ def test_create_200_success_all_params() -> None:
                     "validation_errors": [{"message": "string"}],
                 },
                 "from_bank_transaction_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-                "from_is_reconciled": True,
-                "has_attachments": True,
+                "from_is_reconciled": False,
+                "has_attachments": False,
                 "reference": "string",
                 "to_bank_account": {
                     "account_id": "00000000-0000-0000-0000-000000000000",
@@ -74,11 +67,11 @@ def test_create_200_success_all_params() -> None:
                     "bank_account_number": "string",
                     "bank_account_type": "BANK",
                     "class_": "ASSET",
-                    "code": "string",
+                    "code": "4400",
                     "currency_code": "AED",
                     "description": "string",
                     "enable_payments_to_account": True,
-                    "has_attachments": True,
+                    "has_attachments": False,
                     "name": "Food Sales",
                     "reporting_code": "string",
                     "reporting_code_name": "string",
@@ -91,7 +84,7 @@ def test_create_200_success_all_params() -> None:
                     "validation_errors": [{"message": "string"}],
                 },
                 "to_bank_transaction_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-                "to_is_reconciled": True,
+                "to_is_reconciled": False,
                 "validation_errors": [{"message": "string"}],
             }
         ],
@@ -124,14 +117,7 @@ async def test_await_create_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.bank_transfers.create(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         bank_transfers=[
@@ -147,11 +133,11 @@ async def test_await_create_200_success_all_params() -> None:
                     "bank_account_number": "string",
                     "bank_account_type": "BANK",
                     "class_": "ASSET",
-                    "code": "string",
+                    "code": "4400",
                     "currency_code": "AED",
                     "description": "string",
                     "enable_payments_to_account": True,
-                    "has_attachments": True,
+                    "has_attachments": False,
                     "name": "Food Sales",
                     "reporting_code": "string",
                     "reporting_code_name": "string",
@@ -164,8 +150,8 @@ async def test_await_create_200_success_all_params() -> None:
                     "validation_errors": [{"message": "string"}],
                 },
                 "from_bank_transaction_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-                "from_is_reconciled": True,
-                "has_attachments": True,
+                "from_is_reconciled": False,
+                "has_attachments": False,
                 "reference": "string",
                 "to_bank_account": {
                     "account_id": "00000000-0000-0000-0000-000000000000",
@@ -173,11 +159,11 @@ async def test_await_create_200_success_all_params() -> None:
                     "bank_account_number": "string",
                     "bank_account_type": "BANK",
                     "class_": "ASSET",
-                    "code": "string",
+                    "code": "4400",
                     "currency_code": "AED",
                     "description": "string",
                     "enable_payments_to_account": True,
-                    "has_attachments": True,
+                    "has_attachments": False,
                     "name": "Food Sales",
                     "reporting_code": "string",
                     "reporting_code_name": "string",
@@ -190,7 +176,7 @@ async def test_await_create_200_success_all_params() -> None:
                     "validation_errors": [{"message": "string"}],
                 },
                 "to_bank_transaction_id": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-                "to_is_reconciled": True,
+                "to_is_reconciled": False,
                 "validation_errors": [{"message": "string"}],
             }
         ],
@@ -222,14 +208,7 @@ def test_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.bank_transfers.get(
         bank_transfer_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -262,14 +241,7 @@ async def test_await_get_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.bank_transfers.get(
         bank_transfer_id="00000000-0000-0000-0000-000000000000",
         xero_tenant_id="YOUR_XERO_TENANT_ID",
@@ -301,14 +273,7 @@ def test_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.bank_transfers.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Amount ASC",
@@ -342,14 +307,7 @@ async def test_await_list_200_success_required_only() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.bank_transfers.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Amount ASC",
@@ -382,14 +340,7 @@ def test_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling sync method with example data
-    client = Client(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = Client(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = client.bank_transfers.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Amount ASC",
@@ -423,14 +374,7 @@ async def test_await_list_200_success_all_params() -> None:
     This test uses example data to verify the endpoint behavior.
     """
     # tests calling async method with example data
-    client = AsyncClient(
-        oauth={
-            "client_id": "OAUTH_CLIENT_ID",
-            "client_secret": "OAUTH_CLIENT_SECRET",
-            "token_url": "https://api.sideko.dev/v1/mock_oauth_token/public/xero-accounting/0.1.0/OAuth2",
-        },
-        environment=Environment.MOCK_SERVER,
-    )
+    client = AsyncClient(oauth_token="API_TOKEN", environment=Environment.MOCK_SERVER)
     response = await client.bank_transfers.list(
         xero_tenant_id="YOUR_XERO_TENANT_ID",
         order="Amount ASC",
