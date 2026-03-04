@@ -1,4 +1,4 @@
-# projects.projects1.tasks
+# projects.tasks
 
 ## Module Functions
 
@@ -23,7 +23,7 @@ from os import getenv
 from xero_accounting_py import Client
 
 client = Client(oauth_token=getenv("API_TOKEN"))
-res = client.projects.projects1.tasks.delete(
+res = client.projects.tasks.delete(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
@@ -37,7 +37,7 @@ from os import getenv
 from xero_accounting_py import AsyncClient
 
 client = AsyncClient(oauth_token=getenv("API_TOKEN"))
-res = await client.projects.projects1.tasks.delete(
+res = await client.projects.tasks.delete(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
@@ -68,7 +68,7 @@ from os import getenv
 from xero_accounting_py import Client
 
 client = Client(oauth_token=getenv("API_TOKEN"))
-res = client.projects.projects1.tasks.list(
+res = client.projects.tasks.list(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
     page=1,
@@ -83,7 +83,7 @@ from os import getenv
 from xero_accounting_py import AsyncClient
 
 client = AsyncClient(oauth_token=getenv("API_TOKEN"))
-res = await client.projects.projects1.tasks.list(
+res = await client.projects.tasks.list(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
     page=1,
@@ -124,7 +124,7 @@ from os import getenv
 from xero_accounting_py import Client
 
 client = Client(oauth_token=getenv("API_TOKEN"))
-res = client.projects.projects1.tasks.get(
+res = client.projects.tasks.get(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
@@ -138,7 +138,7 @@ from os import getenv
 from xero_accounting_py import AsyncClient
 
 client = AsyncClient(oauth_token=getenv("API_TOKEN"))
-res = await client.projects.projects1.tasks.get(
+res = await client.projects.tasks.get(
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
     xero_tenant_id="string",
@@ -183,7 +183,7 @@ from os import getenv
 from xero_accounting_py import Client
 
 client = Client(oauth_token=getenv("API_TOKEN"))
-res = client.projects.projects1.tasks.create(
+res = client.projects.tasks.create(
     charge_type="TIME",
     name="Demolition",
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -200,7 +200,7 @@ from os import getenv
 from xero_accounting_py import AsyncClient
 
 client = AsyncClient(oauth_token=getenv("API_TOKEN"))
-res = await client.projects.projects1.tasks.create(
+res = await client.projects.tasks.create(
     charge_type="TIME",
     name="Demolition",
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -249,7 +249,7 @@ from os import getenv
 from xero_accounting_py import Client
 
 client = Client(oauth_token=getenv("API_TOKEN"))
-res = client.projects.projects1.tasks.update(
+res = client.projects.tasks.update(
     charge_type="TIME",
     name="Demolition",
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -267,7 +267,7 @@ from os import getenv
 from xero_accounting_py import AsyncClient
 
 client = AsyncClient(oauth_token=getenv("API_TOKEN"))
-res = await client.projects.projects1.tasks.update(
+res = await client.projects.tasks.update(
     charge_type="TIME",
     name="Demolition",
     project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",

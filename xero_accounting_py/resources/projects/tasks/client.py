@@ -48,7 +48,7 @@ class TasksClient:
 
         Examples:
         ```py
-        client.projects.projects1.tasks.delete(
+        client.projects.tasks.delete(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -114,7 +114,7 @@ class TasksClient:
 
         Examples:
         ```py
-        client.projects.projects1.tasks.list(
+        client.projects.tasks.list(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
             page=1,
@@ -203,7 +203,7 @@ class TasksClient:
 
         Examples:
         ```py
-        client.projects.projects1.tasks.get(
+        client.projects.tasks.get(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -260,7 +260,7 @@ class TasksClient:
 
         Examples:
         ```py
-        client.projects.projects1.tasks.create(
+        client.projects.tasks.create(
             charge_type="TIME",
             name="Demolition",
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -332,7 +332,7 @@ class TasksClient:
 
         Examples:
         ```py
-        client.projects.projects1.tasks.update(
+        client.projects.tasks.update(
             charge_type="TIME",
             name="Demolition",
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -400,7 +400,7 @@ class AsyncTasksClient:
 
         Examples:
         ```py
-        await client.projects.projects1.tasks.delete(
+        await client.projects.tasks.delete(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -466,7 +466,7 @@ class AsyncTasksClient:
 
         Examples:
         ```py
-        await client.projects.projects1.tasks.list(
+        await client.projects.tasks.list(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
             page=1,
@@ -555,7 +555,7 @@ class AsyncTasksClient:
 
         Examples:
         ```py
-        await client.projects.projects1.tasks.get(
+        await client.projects.tasks.get(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             task_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -612,7 +612,7 @@ class AsyncTasksClient:
 
         Examples:
         ```py
-        await client.projects.projects1.tasks.create(
+        await client.projects.tasks.create(
             charge_type="TIME",
             name="Demolition",
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -684,7 +684,7 @@ class AsyncTasksClient:
 
         Examples:
         ```py
-        await client.projects.projects1.tasks.update(
+        await client.projects.tasks.update(
             charge_type="TIME",
             name="Demolition",
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",

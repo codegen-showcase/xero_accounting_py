@@ -599,7 +599,7 @@ modules:
     function_name: get
   - id: xero-accounting.getUsers
     function_name: list
-- path: projects.projects
+- path: projects
   operations:
   - id: xero-projects.createProject
     function_name: create
@@ -611,7 +611,7 @@ modules:
     function_name: patch
   - id: xero-projects.updateProject
     function_name: update
-- path: projects.projects.tasks
+- path: projects.tasks
   operations:
   - id: xero-projects.createTask
     function_name: create
@@ -623,7 +623,7 @@ modules:
     function_name: list
   - id: xero-projects.updateTask
     function_name: update
-- path: projects.projects.time
+- path: projects.time
   operations:
   - id: xero-projects.createTimeEntry
     function_name: create

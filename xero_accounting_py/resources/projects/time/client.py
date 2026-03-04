@@ -47,7 +47,7 @@ class TimeClient:
 
         Examples:
         ```py
-        client.projects.projects1.time.delete(
+        client.projects.time.delete(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -134,7 +134,7 @@ class TimeClient:
 
         Examples:
         ```py
-        client.projects.projects1.time.list(
+        client.projects.time.list(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
             page=1,
@@ -266,7 +266,7 @@ class TimeClient:
 
         Examples:
         ```py
-        client.projects.projects1.time.get(
+        client.projects.time.get(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -325,7 +325,7 @@ class TimeClient:
 
         Examples:
         ```py
-        client.projects.projects1.time.create(
+        client.projects.time.create(
             date_utc="2020-02-26T15:00:00Z",
             duration=30,
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -401,7 +401,7 @@ class TimeClient:
 
         Examples:
         ```py
-        client.projects.projects1.time.update(
+        client.projects.time.update(
             date_utc="2020-02-27T15:00:00Z",
             duration=45,
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -471,7 +471,7 @@ class AsyncTimeClient:
 
         Examples:
         ```py
-        await client.projects.projects1.time.delete(
+        await client.projects.time.delete(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -558,7 +558,7 @@ class AsyncTimeClient:
 
         Examples:
         ```py
-        await client.projects.projects1.time.list(
+        await client.projects.time.list(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
             page=1,
@@ -690,7 +690,7 @@ class AsyncTimeClient:
 
         Examples:
         ```py
-        await client.projects.projects1.time.get(
+        await client.projects.time.get(
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
             xero_tenant_id="string",
@@ -749,7 +749,7 @@ class AsyncTimeClient:
 
         Examples:
         ```py
-        await client.projects.projects1.time.create(
+        await client.projects.time.create(
             date_utc="2020-02-26T15:00:00Z",
             duration=30,
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -825,7 +825,7 @@ class AsyncTimeClient:
 
         Examples:
         ```py
-        await client.projects.projects1.time.update(
+        await client.projects.time.update(
             date_utc="2020-02-27T15:00:00Z",
             duration=45,
             project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",

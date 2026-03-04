@@ -465,32 +465,32 @@ poetry run pytests
 - [get](xero_accounting_py/resources/accounting/users/README.md#get) - Retrieves a specific user
 - [list](xero_accounting_py/resources/accounting/users/README.md#list) - Retrieves users
 
-### [projects.projects1](xero_accounting_py/resources/projects/projects1/README.md)
+### [projects](xero_accounting_py/resources/projects/README.md)
 
-- [create](xero_accounting_py/resources/projects/projects1/README.md#create) - Create one or more new projects
-- [get](xero_accounting_py/resources/projects/projects1/README.md#get) - Retrieves a single project
-- [list](xero_accounting_py/resources/projects/projects1/README.md#list) - Retrieves all projects
-- [patch](xero_accounting_py/resources/projects/projects1/README.md#patch) - creates a project for the specified contact
-- [update](xero_accounting_py/resources/projects/projects1/README.md#update) - Updates a specific project
-
-### [projects.projects1.tasks](xero_accounting_py/resources/projects/projects1/tasks/README.md)
-
-- [create](xero_accounting_py/resources/projects/projects1/tasks/README.md#create) - Allows you to create a task
-- [delete](xero_accounting_py/resources/projects/projects1/tasks/README.md#delete) - Allows you to delete a task
-- [get](xero_accounting_py/resources/projects/projects1/tasks/README.md#get) - Retrieves a single project task
-- [list](xero_accounting_py/resources/projects/projects1/tasks/README.md#list) - Retrieves all project tasks
-- [update](xero_accounting_py/resources/projects/projects1/tasks/README.md#update) - Allows you to update a task
-
-### [projects.projects1.time](xero_accounting_py/resources/projects/projects1/time/README.md)
-
-- [create](xero_accounting_py/resources/projects/projects1/time/README.md#create) - Creates a time entry for a specific project
-- [delete](xero_accounting_py/resources/projects/projects1/time/README.md#delete) - Deletes a time entry for a specific project
-- [get](xero_accounting_py/resources/projects/projects1/time/README.md#get) - Retrieves a single time entry for a specific project
-- [list](xero_accounting_py/resources/projects/projects1/time/README.md#list) - Retrieves all time entries associated with a specific project
-- [update](xero_accounting_py/resources/projects/projects1/time/README.md#update) - Updates a time entry for a specific project
+- [create](xero_accounting_py/resources/projects/README.md#create) - Create one or more new projects
+- [get](xero_accounting_py/resources/projects/README.md#get) - Retrieves a single project
+- [list](xero_accounting_py/resources/projects/README.md#list) - Retrieves all projects
+- [patch](xero_accounting_py/resources/projects/README.md#patch) - creates a project for the specified contact
+- [update](xero_accounting_py/resources/projects/README.md#update) - Updates a specific project
 
 ### [projects.projects_users](xero_accounting_py/resources/projects/projects_users/README.md)
 
 - [list](xero_accounting_py/resources/projects/projects_users/README.md#list) - Retrieves a list of all project users
+
+### [projects.tasks](xero_accounting_py/resources/projects/tasks/README.md)
+
+- [create](xero_accounting_py/resources/projects/tasks/README.md#create) - Allows you to create a task
+- [delete](xero_accounting_py/resources/projects/tasks/README.md#delete) - Allows you to delete a task
+- [get](xero_accounting_py/resources/projects/tasks/README.md#get) - Retrieves a single project task
+- [list](xero_accounting_py/resources/projects/tasks/README.md#list) - Retrieves all project tasks
+- [update](xero_accounting_py/resources/projects/tasks/README.md#update) - Allows you to update a task
+
+### [projects.time](xero_accounting_py/resources/projects/time/README.md)
+
+- [create](xero_accounting_py/resources/projects/time/README.md#create) - Creates a time entry for a specific project
+- [delete](xero_accounting_py/resources/projects/time/README.md#delete) - Deletes a time entry for a specific project
+- [get](xero_accounting_py/resources/projects/time/README.md#get) - Retrieves a single time entry for a specific project
+- [list](xero_accounting_py/resources/projects/time/README.md#list) - Retrieves all time entries associated with a specific project
+- [update](xero_accounting_py/resources/projects/time/README.md#update) - Updates a time entry for a specific project
 
 <!-- MODULE DOCS END -->

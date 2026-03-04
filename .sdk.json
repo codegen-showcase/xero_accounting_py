@@ -1,5 +1,5 @@
 {
-  "id": "15fe17bc-84af-47da-a54c-d1508a4ba258",
+  "id": "a2f6a886-103e-4c0d-a32a-ff84df2b6d08",
   "tracked_paths": [
     {
       "editable": true,
@@ -307,19 +307,19 @@
     },
     {
       "editable": false,
-      "path": "tests/test_projects_projects1_client.py"
-    },
-    {
-      "editable": false,
-      "path": "tests/test_projects_projects1_tasks_client.py"
-    },
-    {
-      "editable": false,
-      "path": "tests/test_projects_projects1_time_client.py"
+      "path": "tests/test_projects_client.py"
     },
     {
       "editable": false,
       "path": "tests/test_projects_projects_users_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_tasks_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_time_client.py"
     },
     {
       "editable": true,
@@ -1239,42 +1239,6 @@
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/README.md"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/__init__.py"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/client.py"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/tasks/README.md"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/tasks/__init__.py"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/tasks/client.py"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/time/README.md"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/time/__init__.py"
-    },
-    {
-      "editable": true,
-      "path": "xero_accounting_py/resources/projects/projects1/time/client.py"
-    },
-    {
-      "editable": true,
       "path": "xero_accounting_py/resources/projects/projects_users/README.md"
     },
     {
@@ -1284,6 +1248,30 @@
     {
       "editable": true,
       "path": "xero_accounting_py/resources/projects/projects_users/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/tasks/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/tasks/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/tasks/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/time/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/time/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/time/client.py"
     },
     {
       "editable": true,

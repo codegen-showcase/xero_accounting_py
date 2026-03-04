@@ -26,7 +26,7 @@ def test_update_204_success_all_params() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.update(
+    response = client.projects.time.update(
         date_utc="1970-01-01T00:00:00",
         duration=123,
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -60,7 +60,7 @@ async def test_await_update_204_success_all_params() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.update(
+    response = await client.projects.time.update(
         date_utc="1970-01-01T00:00:00",
         duration=123,
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -93,7 +93,7 @@ def test_create_200_success_all_params() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.create(
+    response = client.projects.time.create(
         date_utc="1970-01-01T00:00:00",
         duration=123,
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -131,7 +131,7 @@ async def test_await_create_200_success_all_params() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.create(
+    response = await client.projects.time.create(
         date_utc="1970-01-01T00:00:00",
         duration=123,
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -168,7 +168,7 @@ def test_get_200_success_all_params() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.get(
+    response = client.projects.time.get(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
@@ -202,7 +202,7 @@ async def test_await_get_200_success_all_params() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.get(
+    response = await client.projects.time.get(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
@@ -235,7 +235,7 @@ def test_list_200_success_required_only() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.list(
+    response = client.projects.time.list(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
         page=1,
@@ -270,7 +270,7 @@ async def test_await_list_200_success_required_only() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.list(
+    response = await client.projects.time.list(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
         page=1,
@@ -304,7 +304,7 @@ def test_list_200_success_all_params() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.list(
+    response = client.projects.time.list(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
         contact_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -347,7 +347,7 @@ async def test_await_list_200_success_all_params() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.list(
+    response = await client.projects.time.list(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
         contact_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
@@ -389,7 +389,7 @@ def test_delete_204_success_all_params() -> None:
     """
     # tests calling sync method with example data
     client = Client(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = client.projects.projects1.time.delete(
+    response = client.projects.time.delete(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
@@ -418,7 +418,7 @@ async def test_await_delete_204_success_all_params() -> None:
     """
     # tests calling async method with example data
     client = AsyncClient(oauth_token="API_TOKEN", environment=SIDEKO_MOCK_SERVER)
-    response = await client.projects.projects1.time.delete(
+    response = await client.projects.time.delete(
         project_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         time_entry_id="3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
         xero_tenant_id="string",
