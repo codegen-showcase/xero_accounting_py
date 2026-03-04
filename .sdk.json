@@ -1,5 +1,5 @@
 {
-  "id": "16739bf0-116f-4d96-8b15-79e028d71973",
+  "id": "15fe17bc-84af-47da-a54c-d1508a4ba258",
   "tracked_paths": [
     {
       "editable": true,
@@ -19,291 +19,307 @@
     },
     {
       "editable": false,
-      "path": "tests/test_accounts_attachments_client.py"
+      "path": "tests/test_accounting_accounts_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_accounts_client.py"
+      "path": "tests/test_accounting_accounts_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transactions_attachments_client.py"
+      "path": "tests/test_accounting_bank_transactions_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transactions_client.py"
+      "path": "tests/test_accounting_bank_transactions_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transactions_history_client.py"
+      "path": "tests/test_accounting_bank_transactions_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transfers_attachments_client.py"
+      "path": "tests/test_accounting_bank_transfers_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transfers_client.py"
+      "path": "tests/test_accounting_bank_transfers_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_bank_transfers_history_client.py"
+      "path": "tests/test_accounting_bank_transfers_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_batch_payments_client.py"
+      "path": "tests/test_accounting_batch_payments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_batch_payments_history_client.py"
+      "path": "tests/test_accounting_batch_payments_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_branding_themes_client.py"
+      "path": "tests/test_accounting_branding_themes_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_branding_themes_payment_services_client.py"
+      "path": "tests/test_accounting_branding_themes_payment_services_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_budgets_client.py"
+      "path": "tests/test_accounting_budgets_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contact_groups_client.py"
+      "path": "tests/test_accounting_contact_groups_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contact_groups_contacts_client.py"
+      "path": "tests/test_accounting_contact_groups_contacts_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contacts_attachments_client.py"
+      "path": "tests/test_accounting_contacts_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contacts_cis_settings_client.py"
+      "path": "tests/test_accounting_contacts_cis_settings_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contacts_client.py"
+      "path": "tests/test_accounting_contacts_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_contacts_history_client.py"
+      "path": "tests/test_accounting_contacts_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_credit_notes_allocations_client.py"
+      "path": "tests/test_accounting_credit_notes_allocations_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_credit_notes_attachments_client.py"
+      "path": "tests/test_accounting_credit_notes_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_credit_notes_client.py"
+      "path": "tests/test_accounting_credit_notes_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_credit_notes_history_client.py"
+      "path": "tests/test_accounting_credit_notes_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_credit_notes_pdf_client.py"
+      "path": "tests/test_accounting_credit_notes_pdf_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_currencies_client.py"
+      "path": "tests/test_accounting_currencies_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_employees_client.py"
+      "path": "tests/test_accounting_employees_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_expense_claims_client.py"
+      "path": "tests/test_accounting_expense_claims_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_expense_claims_history_client.py"
+      "path": "tests/test_accounting_expense_claims_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoice_reminders_settings_client.py"
+      "path": "tests/test_accounting_invoice_reminders_settings_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_attachments_client.py"
+      "path": "tests/test_accounting_invoices_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_client.py"
+      "path": "tests/test_accounting_invoices_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_email_client.py"
+      "path": "tests/test_accounting_invoices_email_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_history_client.py"
+      "path": "tests/test_accounting_invoices_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_online_invoice_client.py"
+      "path": "tests/test_accounting_invoices_online_invoice_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_invoices_pdf_client.py"
+      "path": "tests/test_accounting_invoices_pdf_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_items_client.py"
+      "path": "tests/test_accounting_items_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_items_history_client.py"
+      "path": "tests/test_accounting_items_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_journals_client.py"
+      "path": "tests/test_accounting_journals_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_linked_transactions_client.py"
+      "path": "tests/test_accounting_linked_transactions_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_manual_journals_attachments_client.py"
+      "path": "tests/test_accounting_manual_journals_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_manual_journals_client.py"
+      "path": "tests/test_accounting_manual_journals_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_manual_journals_history_client.py"
+      "path": "tests/test_accounting_manual_journals_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_organisation_actions_client.py"
+      "path": "tests/test_accounting_organisation_actions_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_organisation_cis_settings_client.py"
+      "path": "tests/test_accounting_organisation_cis_settings_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_organisation_client.py"
+      "path": "tests/test_accounting_organisation_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_overpayments_allocations_client.py"
+      "path": "tests/test_accounting_overpayments_allocations_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_overpayments_client.py"
+      "path": "tests/test_accounting_overpayments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_overpayments_history_client.py"
+      "path": "tests/test_accounting_overpayments_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_payment_services_client.py"
+      "path": "tests/test_accounting_payment_services_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_payments_client.py"
+      "path": "tests/test_accounting_payments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_payments_history_client.py"
+      "path": "tests/test_accounting_payments_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_prepayments_allocations_client.py"
+      "path": "tests/test_accounting_prepayments_allocations_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_prepayments_client.py"
+      "path": "tests/test_accounting_prepayments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_prepayments_history_client.py"
+      "path": "tests/test_accounting_prepayments_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_purchase_orders_attachments_client.py"
+      "path": "tests/test_accounting_purchase_orders_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_purchase_orders_client.py"
+      "path": "tests/test_accounting_purchase_orders_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_purchase_orders_history_client.py"
+      "path": "tests/test_accounting_purchase_orders_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_quotes_attachments_client.py"
+      "path": "tests/test_accounting_quotes_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_quotes_client.py"
+      "path": "tests/test_accounting_quotes_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_quotes_history_client.py"
+      "path": "tests/test_accounting_quotes_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_receipts_attachments_client.py"
+      "path": "tests/test_accounting_receipts_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_receipts_client.py"
+      "path": "tests/test_accounting_receipts_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_receipts_history_client.py"
+      "path": "tests/test_accounting_receipts_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_repeating_invoices_attachments_client.py"
+      "path": "tests/test_accounting_repeating_invoices_attachments_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_repeating_invoices_client.py"
+      "path": "tests/test_accounting_repeating_invoices_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_repeating_invoices_history_client.py"
+      "path": "tests/test_accounting_repeating_invoices_history_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_reports_client.py"
+      "path": "tests/test_accounting_reports_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_setup_client.py"
+      "path": "tests/test_accounting_setup_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_tax_rates_client.py"
+      "path": "tests/test_accounting_tax_rates_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_tracking_categories_client.py"
+      "path": "tests/test_accounting_tracking_categories_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_tracking_categories_options_client.py"
+      "path": "tests/test_accounting_tracking_categories_options_client.py"
     },
     {
       "editable": false,
-      "path": "tests/test_users_client.py"
+      "path": "tests/test_accounting_users_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_projects1_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_projects1_tasks_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_projects1_time_client.py"
+    },
+    {
+      "editable": false,
+      "path": "tests/test_projects_projects_users_client.py"
     },
     {
       "editable": true,
@@ -323,879 +339,951 @@
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/README.md"
+      "path": "xero_accounting_py/resources/accounting/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/accounts/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/accounts/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/accounts/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/accounts/client.py"
+      "path": "xero_accounting_py/resources/accounting/accounts/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/README.md"
+      "path": "xero_accounting_py/resources/accounting/accounts/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/accounts/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transactions/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transactions/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/bank_transfers/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/README.md"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/bank_transfers/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/client.py"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/batch_payments/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/README.md"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/batch_payments/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/client.py"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/payment_services/README.md"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/payment_services/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/branding_themes/payment_services/client.py"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/payment_services/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/budgets/README.md"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/payment_services/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/budgets/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/branding_themes/payment_services/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/budgets/client.py"
+      "path": "xero_accounting_py/resources/accounting/budgets/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/README.md"
+      "path": "xero_accounting_py/resources/accounting/budgets/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/budgets/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/client.py"
+      "path": "xero_accounting_py/resources/accounting/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/contacts/README.md"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/contacts/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contact_groups/contacts/client.py"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/README.md"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/contacts/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/contacts/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/contact_groups/contacts/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/cis_settings/README.md"
+      "path": "xero_accounting_py/resources/accounting/contacts/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/cis_settings/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/cis_settings/client.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/client.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/cis_settings/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/contacts/cis_settings/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/cis_settings/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/contacts/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/README.md"
+      "path": "xero_accounting_py/resources/accounting/contacts/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/contacts/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/allocations/README.md"
+      "path": "xero_accounting_py/resources/accounting/contacts/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/allocations/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/allocations/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/allocations/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/allocations/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/allocations/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/pdf/README.md"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/pdf/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/credit_notes/pdf/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/currencies/README.md"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/pdf/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/currencies/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/pdf/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/currencies/client.py"
+      "path": "xero_accounting_py/resources/accounting/credit_notes/pdf/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/employees/README.md"
+      "path": "xero_accounting_py/resources/accounting/currencies/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/employees/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/currencies/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/employees/client.py"
+      "path": "xero_accounting_py/resources/accounting/currencies/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/README.md"
+      "path": "xero_accounting_py/resources/accounting/employees/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/employees/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/client.py"
+      "path": "xero_accounting_py/resources/accounting/employees/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/expense_claims/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/README.md"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/client.py"
+      "path": "xero_accounting_py/resources/accounting/expense_claims/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/settings/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/settings/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoice_reminders/settings/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/settings/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/settings/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoice_reminders/settings/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/email/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoices/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/email/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/email/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoices/email/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/email/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/email/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/online_invoice/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoices/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/online_invoice/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/online_invoice/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/pdf/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoices/online_invoice/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/pdf/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/online_invoice/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/invoices/pdf/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/online_invoice/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/README.md"
+      "path": "xero_accounting_py/resources/accounting/invoices/pdf/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/pdf/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/client.py"
+      "path": "xero_accounting_py/resources/accounting/invoices/pdf/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/items/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/items/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/items/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/items/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/journals/README.md"
+      "path": "xero_accounting_py/resources/accounting/items/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/journals/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/items/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/journals/client.py"
+      "path": "xero_accounting_py/resources/accounting/items/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/linked_transactions/README.md"
+      "path": "xero_accounting_py/resources/accounting/journals/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/linked_transactions/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/journals/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/linked_transactions/client.py"
+      "path": "xero_accounting_py/resources/accounting/journals/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/README.md"
+      "path": "xero_accounting_py/resources/accounting/linked_transactions/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/linked_transactions/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/linked_transactions/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/client.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/manual_journals/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/README.md"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/actions/README.md"
+      "path": "xero_accounting_py/resources/accounting/manual_journals/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/actions/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/actions/client.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/cis_settings/README.md"
+      "path": "xero_accounting_py/resources/accounting/organisation/actions/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/cis_settings/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/actions/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/cis_settings/client.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/actions/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/organisation/client.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/cis_settings/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/README.md"
+      "path": "xero_accounting_py/resources/accounting/organisation/cis_settings/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/organisation/cis_settings/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/allocations/README.md"
+      "path": "xero_accounting_py/resources/accounting/organisation/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/allocations/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/allocations/client.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/client.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/allocations/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/overpayments/allocations/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/allocations/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/overpayments/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payment_services/README.md"
+      "path": "xero_accounting_py/resources/accounting/overpayments/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payment_services/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payment_services/client.py"
+      "path": "xero_accounting_py/resources/accounting/overpayments/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/README.md"
+      "path": "xero_accounting_py/resources/accounting/payment_services/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/payment_services/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/client.py"
+      "path": "xero_accounting_py/resources/accounting/payment_services/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/payments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/payments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/payments/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/payments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/README.md"
+      "path": "xero_accounting_py/resources/accounting/payments/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/payments/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/allocations/README.md"
+      "path": "xero_accounting_py/resources/accounting/payments/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/allocations/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/allocations/client.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/client.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/allocations/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/prepayments/allocations/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/allocations/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/prepayments/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/README.md"
+      "path": "xero_accounting_py/resources/accounting/prepayments/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/prepayments/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/prepayments/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/client.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/purchase_orders/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/README.md"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/purchase_orders/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/client.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/quotes/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/quotes/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/README.md"
+      "path": "xero_accounting_py/resources/accounting/quotes/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/quotes/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/quotes/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/client.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/receipts/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/receipts/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/README.md"
+      "path": "xero_accounting_py/resources/accounting/receipts/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/receipts/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/attachments/README.md"
+      "path": "xero_accounting_py/resources/accounting/receipts/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/attachments/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/attachments/client.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/client.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/attachments/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/history/README.md"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/attachments/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/history/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/attachments/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/repeating_invoices/history/client.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/reports/README.md"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/history/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/reports/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/history/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/reports/client.py"
+      "path": "xero_accounting_py/resources/accounting/repeating_invoices/history/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/setup/README.md"
+      "path": "xero_accounting_py/resources/accounting/reports/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/setup/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/reports/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/setup/client.py"
+      "path": "xero_accounting_py/resources/accounting/reports/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tax_rates/README.md"
+      "path": "xero_accounting_py/resources/accounting/setup/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tax_rates/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/setup/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tax_rates/client.py"
+      "path": "xero_accounting_py/resources/accounting/setup/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/README.md"
+      "path": "xero_accounting_py/resources/accounting/tax_rates/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/tax_rates/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/client.py"
+      "path": "xero_accounting_py/resources/accounting/tax_rates/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/options/README.md"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/options/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/tracking_categories/options/client.py"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/client.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/users/README.md"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/options/README.md"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/users/__init__.py"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/options/__init__.py"
     },
     {
       "editable": true,
-      "path": "xero_accounting_py/resources/users/client.py"
+      "path": "xero_accounting_py/resources/accounting/tracking_categories/options/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/accounting/users/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/accounting/users/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/accounting/users/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/tasks/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/tasks/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/tasks/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/time/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/time/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects1/time/client.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects_users/README.md"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects_users/__init__.py"
+    },
+    {
+      "editable": true,
+      "path": "xero_accounting_py/resources/projects/projects_users/client.py"
     },
     {
       "editable": true,
@@ -1240,6 +1328,10 @@
     {
       "editable": false,
       "path": "xero_accounting_py/types/models/allocations.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/amount.py"
     },
     {
       "editable": false,
@@ -1539,6 +1631,22 @@
     },
     {
       "editable": false,
+      "path": "xero_accounting_py/types/models/project.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/project_user.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/project_users.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/projects.py"
+    },
+    {
+      "editable": false,
       "path": "xero_accounting_py/types/models/purchase.py"
     },
     {
@@ -1619,6 +1727,14 @@
     },
     {
       "editable": false,
+      "path": "xero_accounting_py/types/models/task.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/tasks.py"
+    },
+    {
+      "editable": false,
       "path": "xero_accounting_py/types/models/tax_breakdown_component.py"
     },
     {
@@ -1636,6 +1752,14 @@
     {
       "editable": false,
       "path": "xero_accounting_py/types/models/ten_ninety_nine_contact.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/time_entries.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/models/time_entry.py"
     },
     {
       "editable": false,
@@ -1696,6 +1820,10 @@
     {
       "editable": false,
       "path": "xero_accounting_py/types/params/allocations.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/params/amount.py"
     },
     {
       "editable": false,
@@ -1915,6 +2043,14 @@
     },
     {
       "editable": false,
+      "path": "xero_accounting_py/types/params/project_create_or_update.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/params/project_patch.py"
+    },
+    {
+      "editable": false,
       "path": "xero_accounting_py/types/params/purchase.py"
     },
     {
@@ -1967,6 +2103,10 @@
     },
     {
       "editable": false,
+      "path": "xero_accounting_py/types/params/task_create_or_update.py"
+    },
+    {
+      "editable": false,
       "path": "xero_accounting_py/types/params/tax_breakdown_component.py"
     },
     {
@@ -1980,6 +2120,10 @@
     {
       "editable": false,
       "path": "xero_accounting_py/types/params/tax_rates.py"
+    },
+    {
+      "editable": false,
+      "path": "xero_accounting_py/types/params/time_entry_create_or_update.py"
     },
     {
       "editable": false,

@@ -1,4 +1,9 @@
-api: xero-accounting
+api:
+  - name: xero-accounting
+    path: accounting
+  - name: xero-projects
+    path: projects
+
 languages:
   java:
     sdk_name: xeroaccountingjava
@@ -26,10 +31,17 @@ languages:
     sdk_name: XeroAccountingCSharp
     ci_cd:
       - github
+
 servers:
   - url: https://api.xero.com/api.xro/2.0
-    name: environment
+    name: accounting
+    api: xero-accounting
     default: true
+  - url: https://api.xero.com/projects.xro/2.0
+    name: projects
+    api: xero-projects
+    default: true
+
 auths:
   - id: OAuth2
     access_token_json_pointer: /access_token
@@ -37,551 +49,593 @@ auths:
     credentials_location: request_body
     body_content_type: form
     param: oauth
+
 default_module_structure: path
+
 modules:
-- path: accounts
+- path: accounting.accounts
   operations:
-  - id: createAccount
+  - id: xero-accounting.createAccount
     function_name: create
-  - id: deleteAccount
+  - id: xero-accounting.deleteAccount
     function_name: delete
-  - id: getAccount
+  - id: xero-accounting.getAccount
     function_name: get
-  - id: getAccounts
+  - id: xero-accounting.getAccounts
     function_name: list
-  - id: updateAccount
+  - id: xero-accounting.updateAccount
     function_name: update
-- path: accounts.attachments
+- path: accounting.accounts.attachments
   operations:
-  - id: getAccountAttachmentById
+  - id: xero-accounting.getAccountAttachmentById
     function_name: get_by_id
-  - id: getAccountAttachments
+  - id: xero-accounting.getAccountAttachments
     function_name: list
-- path: bank_transactions
+- path: accounting.bank_transactions
   operations:
-  - id: createBankTransactions
+  - id: xero-accounting.createBankTransactions
     function_name: create
-  - id: getBankTransaction
+  - id: xero-accounting.getBankTransaction
     function_name: get
-  - id: getBankTransactions
+  - id: xero-accounting.getBankTransactions
     function_name: list
-  - id: updateBankTransaction
+  - id: xero-accounting.updateBankTransaction
     function_name: update
-  - id: updateOrCreateBankTransactions
+  - id: xero-accounting.updateOrCreateBankTransactions
     function_name: update_or_create
-- path: bank_transactions.attachments
+- path: accounting.bank_transactions.attachments
   operations:
-  - id: getBankTransactionAttachmentById
+  - id: xero-accounting.getBankTransactionAttachmentById
     function_name: get_by_id
-  - id: getBankTransactionAttachments
+  - id: xero-accounting.getBankTransactionAttachments
     function_name: list
-- path: bank_transactions.history
+- path: accounting.bank_transactions.history
   operations:
-  - id: createBankTransactionHistoryRecord
+  - id: xero-accounting.createBankTransactionHistoryRecord
     function_name: create_record
-  - id: getBankTransactionsHistory
+  - id: xero-accounting.getBankTransactionsHistory
     function_name: list
-- path: bank_transfers
+- path: accounting.bank_transfers
   operations:
-  - id: createBankTransfer
+  - id: xero-accounting.createBankTransfer
     function_name: create
-  - id: getBankTransfer
+  - id: xero-accounting.getBankTransfer
     function_name: get
-  - id: getBankTransfers
+  - id: xero-accounting.getBankTransfers
     function_name: list
-- path: bank_transfers.attachments
+- path: accounting.bank_transfers.attachments
   operations:
-  - id: getBankTransferAttachmentById
+  - id: xero-accounting.getBankTransferAttachmentById
     function_name: get_by_id
-  - id: getBankTransferAttachments
+  - id: xero-accounting.getBankTransferAttachments
     function_name: list
-- path: bank_transfers.history
+- path: accounting.bank_transfers.history
   operations:
-  - id: createBankTransferHistoryRecord
+  - id: xero-accounting.createBankTransferHistoryRecord
     function_name: create_record
-  - id: getBankTransferHistory
+  - id: xero-accounting.getBankTransferHistory
     function_name: list
-- path: batch_payments
+- path: accounting.batch_payments
   operations:
-  - id: createBatchPayment
+  - id: xero-accounting.createBatchPayment
     function_name: create
-  - id: deleteBatchPayment
+  - id: xero-accounting.deleteBatchPayment
     function_name: delete
-  - id: deleteBatchPaymentByUrlParam
+  - id: xero-accounting.deleteBatchPaymentByUrlParam
     function_name: update
-  - id: getBatchPayment
+  - id: xero-accounting.getBatchPayment
     function_name: get
-  - id: getBatchPayments
+  - id: xero-accounting.getBatchPayments
     function_name: list
-- path: batch_payments.history
+- path: accounting.batch_payments.history
   operations:
-  - id: createBatchPaymentHistoryRecord
+  - id: xero-accounting.createBatchPaymentHistoryRecord
     function_name: create_record
-  - id: getBatchPaymentHistory
+  - id: xero-accounting.getBatchPaymentHistory
     function_name: list
-- path: branding_themes
+- path: accounting.branding_themes
   operations:
-  - id: getBrandingTheme
+  - id: xero-accounting.getBrandingTheme
     function_name: get
-  - id: getBrandingThemes
+  - id: xero-accounting.getBrandingThemes
     function_name: list
-- path: branding_themes.payment_services
+- path: accounting.branding_themes.payment_services
   operations:
-  - id: createBrandingThemePaymentServices
+  - id: xero-accounting.createBrandingThemePaymentServices
     function_name: create
-  - id: getBrandingThemePaymentServices
+  - id: xero-accounting.getBrandingThemePaymentServices
     function_name: list
-- path: budgets
+- path: accounting.budgets
   operations:
-  - id: getBudget
+  - id: xero-accounting.getBudget
     function_name: get
-  - id: getBudgets
+  - id: xero-accounting.getBudgets
     function_name: list
-- path: contact_groups
+- path: accounting.contact_groups
   operations:
-  - id: createContactGroup
+  - id: xero-accounting.createContactGroup
     function_name: create
-  - id: getContactGroup
+  - id: xero-accounting.getContactGroup
     function_name: get
-  - id: getContactGroups
+  - id: xero-accounting.getContactGroups
     function_name: list
-  - id: updateContactGroup
+  - id: xero-accounting.updateContactGroup
     function_name: update
-- path: contact_groups.contacts
+- path: accounting.contact_groups.contacts
   operations:
-  - id: createContactGroupContacts
+  - id: xero-accounting.createContactGroupContacts
     function_name: create
-  - id: deleteContactGroupContact
+  - id: xero-accounting.deleteContactGroupContact
     function_name: delete
-  - id: deleteContactGroupContacts
+  - id: xero-accounting.deleteContactGroupContacts
     function_name: delete_all
-- path: contacts
+- path: accounting.contacts
   operations:
-  - id: createContacts
+  - id: xero-accounting.createContacts
     function_name: create
-  - id: getContact
+  - id: xero-accounting.getContact
     function_name: get
-  - id: getContacts
+  - id: xero-accounting.getContacts
     function_name: list
-  - id: updateContact
+  - id: xero-accounting.updateContact
     function_name: update
-  - id: updateOrCreateContacts
+  - id: xero-accounting.updateOrCreateContacts
     function_name: update_or_create
-- path: contacts.attachments
+- path: accounting.contacts.attachments
   operations:
-  - id: getContactAttachmentById
+  - id: xero-accounting.getContactAttachmentById
     function_name: get_by_id
-  - id: getContactAttachments
+  - id: xero-accounting.getContactAttachments
     function_name: list
-- path: contacts.cis_settings
+- path: accounting.contacts.cis_settings
   operations:
-  - id: getContactCISSettings
+  - id: xero-accounting.getContactCISSettings
     function_name: list
-- path: contacts.history
+- path: accounting.contacts.history
   operations:
-  - id: createContactHistory
+  - id: xero-accounting.createContactHistory
     function_name: create
-  - id: getContactHistory
+  - id: xero-accounting.getContactHistory
     function_name: list
-- path: credit_notes
+- path: accounting.credit_notes
   operations:
-  - id: createCreditNotes
+  - id: xero-accounting.createCreditNotes
     function_name: create
-  - id: getCreditNote
+  - id: xero-accounting.getCreditNote
     function_name: get
-  - id: getCreditNotes
+  - id: xero-accounting.getCreditNotes
     function_name: list
-  - id: updateCreditNote
+  - id: xero-accounting.updateCreditNote
     function_name: update
-  - id: updateOrCreateCreditNotes
+  - id: xero-accounting.updateOrCreateCreditNotes
     function_name: update_or_create
-- path: credit_notes.allocations
+- path: accounting.credit_notes.allocations
   operations:
-  - id: createCreditNoteAllocation
+  - id: xero-accounting.createCreditNoteAllocation
     function_name: create
-  - id: deleteCreditNoteAllocations
+  - id: xero-accounting.deleteCreditNoteAllocations
     function_name: delete
-- path: credit_notes.attachments
+- path: accounting.credit_notes.attachments
   operations:
-  - id: getCreditNoteAttachmentById
+  - id: xero-accounting.getCreditNoteAttachmentById
     function_name: get_by_id
-  - id: getCreditNoteAttachments
+  - id: xero-accounting.getCreditNoteAttachments
     function_name: list
-- path: credit_notes.history
+- path: accounting.credit_notes.history
   operations:
-  - id: createCreditNoteHistory
+  - id: xero-accounting.createCreditNoteHistory
     function_name: create_record
-  - id: getCreditNoteHistory
+  - id: xero-accounting.getCreditNoteHistory
     function_name: list
-- path: credit_notes.pdf
+- path: accounting.credit_notes.pdf
   operations:
-  - id: getCreditNoteAsPdf
+  - id: xero-accounting.getCreditNoteAsPdf
     function_name: get
-- path: currencies
+- path: accounting.currencies
   operations:
-  - id: createCurrency
+  - id: xero-accounting.createCurrency
     function_name: create
-  - id: getCurrencies
+  - id: xero-accounting.getCurrencies
     function_name: list
-- path: employees
+- path: accounting.employees
   operations:
-  - id: createEmployees
+  - id: xero-accounting.createEmployees
     function_name: create
-  - id: getEmployee
+  - id: xero-accounting.getEmployee
     function_name: get
-  - id: getEmployees
+  - id: xero-accounting.getEmployees
     function_name: list
-  - id: updateOrCreateEmployees
+  - id: xero-accounting.updateOrCreateEmployees
     function_name: update_or_create
-- path: expense_claims
+- path: accounting.expense_claims
   operations:
-  - id: createExpenseClaims
+  - id: xero-accounting.createExpenseClaims
     function_name: create
-  - id: getExpenseClaim
+  - id: xero-accounting.getExpenseClaim
     function_name: get
-  - id: getExpenseClaims
+  - id: xero-accounting.getExpenseClaims
     function_name: list
-  - id: updateExpenseClaim
+  - id: xero-accounting.updateExpenseClaim
     function_name: update
-- path: expense_claims.history
+- path: accounting.expense_claims.history
   operations:
-  - id: createExpenseClaimHistory
+  - id: xero-accounting.createExpenseClaimHistory
     function_name: create_record
-  - id: getExpenseClaimHistory
+  - id: xero-accounting.getExpenseClaimHistory
     function_name: list
-- path: invoice_reminders.settings
+- path: accounting.invoice_reminders.settings
   operations:
-  - id: getInvoiceReminders
+  - id: xero-accounting.getInvoiceReminders
     function_name: list
-- path: invoices
+- path: accounting.invoices
   operations:
-  - id: createInvoices
+  - id: xero-accounting.createInvoices
     function_name: create
-  - id: getInvoice
+  - id: xero-accounting.getInvoice
     function_name: get
-  - id: getInvoices
+  - id: xero-accounting.getInvoices
     function_name: list
-  - id: updateInvoice
+  - id: xero-accounting.updateInvoice
     function_name: update
-  - id: updateOrCreateInvoices
+  - id: xero-accounting.updateOrCreateInvoices
     function_name: update_or_create
-- path: invoices.attachments
+- path: accounting.invoices.attachments
   operations:
-  - id: getInvoiceAttachmentById
+  - id: xero-accounting.getInvoiceAttachmentById
     function_name: get_by_id
-  - id: getInvoiceAttachments
+  - id: xero-accounting.getInvoiceAttachments
     function_name: list
-- path: invoices.email
+- path: accounting.invoices.email
   operations:
-  - id: emailInvoice
+  - id: xero-accounting.emailInvoice
     function_name: send
-- path: invoices.history
+- path: accounting.invoices.history
   operations:
-  - id: createInvoiceHistory
+  - id: xero-accounting.createInvoiceHistory
     function_name: create_record
-  - id: getInvoiceHistory
+  - id: xero-accounting.getInvoiceHistory
     function_name: list
-- path: invoices.online_invoice
+- path: accounting.invoices.online_invoice
   operations:
-  - id: getOnlineInvoice
+  - id: xero-accounting.getOnlineInvoice
     function_name: get
-- path: invoices.pdf
+- path: accounting.invoices.pdf
   operations:
-  - id: getInvoiceAsPdf
+  - id: xero-accounting.getInvoiceAsPdf
     function_name: get
-- path: items
+- path: accounting.items
   operations:
-  - id: createItems
+  - id: xero-accounting.createItems
     function_name: create
-  - id: deleteItem
+  - id: xero-accounting.deleteItem
     function_name: delete
-  - id: getItem
+  - id: xero-accounting.getItem
     function_name: get
-  - id: getItems
+  - id: xero-accounting.getItems
     function_name: list
-  - id: updateItem
+  - id: xero-accounting.updateItem
     function_name: update
-  - id: updateOrCreateItems
+  - id: xero-accounting.updateOrCreateItems
     function_name: update_or_create
-- path: items.history
+- path: accounting.items.history
   operations:
-  - id: createItemHistory
+  - id: xero-accounting.createItemHistory
     function_name: create_record
-  - id: getItemHistory
+  - id: xero-accounting.getItemHistory
     function_name: list
-- path: journals
+- path: accounting.journals
   operations:
-  - id: getJournal
+  - id: xero-accounting.getJournal
     function_name: get
-  - id: getJournals
+  - id: xero-accounting.getJournals
     function_name: list
-- path: linked_transactions
+- path: accounting.linked_transactions
   operations:
-  - id: createLinkedTransaction
+  - id: xero-accounting.createLinkedTransaction
     function_name: create
-  - id: deleteLinkedTransaction
+  - id: xero-accounting.deleteLinkedTransaction
     function_name: delete
-  - id: getLinkedTransaction
+  - id: xero-accounting.getLinkedTransaction
     function_name: get
-  - id: getLinkedTransactions
+  - id: xero-accounting.getLinkedTransactions
     function_name: list
-  - id: updateLinkedTransaction
+  - id: xero-accounting.updateLinkedTransaction
     function_name: update
-- path: manual_journals
+- path: accounting.manual_journals
   operations:
-  - id: createManualJournals
+  - id: xero-accounting.createManualJournals
     function_name: create
-  - id: getManualJournal
+  - id: xero-accounting.getManualJournal
     function_name: get
-  - id: getManualJournals
+  - id: xero-accounting.getManualJournals
     function_name: list
-  - id: updateManualJournal
+  - id: xero-accounting.updateManualJournal
     function_name: update
-  - id: updateOrCreateManualJournals
+  - id: xero-accounting.updateOrCreateManualJournals
     function_name: update_or_create
-- path: manual_journals.attachments
+- path: accounting.manual_journals.attachments
   operations:
-  - id: getManualJournalAttachmentById
+  - id: xero-accounting.getManualJournalAttachmentById
     function_name: get_by_id
-  - id: getManualJournalAttachments
+  - id: xero-accounting.getManualJournalAttachments
     function_name: list
-- path: manual_journals.history
+- path: accounting.manual_journals.history
   operations:
-  - id: createManualJournalHistoryRecord
+  - id: xero-accounting.createManualJournalHistoryRecord
     function_name: create_record
-  - id: getManualJournalsHistory
+  - id: xero-accounting.getManualJournalsHistory
     function_name: list
-- path: organisation
+- path: accounting.organisation
   operations:
-  - id: getOrganisations
+  - id: xero-accounting.getOrganisations
     function_name: list
-- path: organisation.actions
+- path: accounting.organisation.actions
   operations:
-  - id: getOrganisationActions
+  - id: xero-accounting.getOrganisationActions
     function_name: list
-- path: organisation.cis_settings
+- path: accounting.organisation.cis_settings
   operations:
-  - id: getOrganisationCISSettings
+  - id: xero-accounting.getOrganisationCISSettings
     function_name: list
-- path: overpayments
+- path: accounting.overpayments
   operations:
-  - id: getOverpayment
+  - id: xero-accounting.getOverpayment
     function_name: get
-  - id: getOverpayments
+  - id: xero-accounting.getOverpayments
     function_name: list
-- path: overpayments.allocations
+- path: accounting.overpayments.allocations
   operations:
-  - id: createOverpaymentAllocations
+  - id: xero-accounting.createOverpaymentAllocations
     function_name: create
-  - id: deleteOverpaymentAllocations
+  - id: xero-accounting.deleteOverpaymentAllocations
     function_name: delete
-- path: overpayments.history
+- path: accounting.overpayments.history
   operations:
-  - id: createOverpaymentHistory
+  - id: xero-accounting.createOverpaymentHistory
     function_name: create_record
-  - id: getOverpaymentHistory
+  - id: xero-accounting.getOverpaymentHistory
     function_name: list
-- path: payment_services
+- path: accounting.payment_services
   operations:
-  - id: createPaymentService
+  - id: xero-accounting.createPaymentService
     function_name: create
-  - id: getPaymentServices
+  - id: xero-accounting.getPaymentServices
     function_name: list
-- path: payments
+- path: accounting.payments
   operations:
-  - id: createPayment
+  - id: xero-accounting.createPayment
     function_name: create_1
-  - id: createPayments
+  - id: xero-accounting.createPayments
     function_name: create
-  - id: deletePayment
+  - id: xero-accounting.deletePayment
     function_name: delete
-  - id: getPayment
+  - id: xero-accounting.getPayment
     function_name: get
-  - id: getPayments
+  - id: xero-accounting.getPayments
     function_name: list
-- path: payments.history
+- path: accounting.payments.history
   operations:
-  - id: createPaymentHistory
+  - id: xero-accounting.createPaymentHistory
     function_name: create_record
-  - id: getPaymentHistory
+  - id: xero-accounting.getPaymentHistory
     function_name: list
-- path: prepayments
+- path: accounting.prepayments
   operations:
-  - id: getPrepayment
+  - id: xero-accounting.getPrepayment
     function_name: get
-  - id: getPrepayments
+  - id: xero-accounting.getPrepayments
     function_name: list
-- path: prepayments.allocations
+- path: accounting.prepayments.allocations
   operations:
-  - id: createPrepaymentAllocations
+  - id: xero-accounting.createPrepaymentAllocations
     function_name: create
-  - id: deletePrepaymentAllocations
+  - id: xero-accounting.deletePrepaymentAllocations
     function_name: delete
-- path: prepayments.history
+- path: accounting.prepayments.history
   operations:
-  - id: createPrepaymentHistory
+  - id: xero-accounting.createPrepaymentHistory
     function_name: create_record
-  - id: getPrepaymentHistory
+  - id: xero-accounting.getPrepaymentHistory
     function_name: list
-- path: purchase_orders
+- path: accounting.purchase_orders
   operations:
-  - id: createPurchaseOrders
+  - id: xero-accounting.createPurchaseOrders
     function_name: create
-  - id: getPurchaseOrder
+  - id: xero-accounting.getPurchaseOrder
     function_name: get
-  - id: getPurchaseOrders
+  - id: xero-accounting.getPurchaseOrders
     function_name: list
-  - id: updateOrCreatePurchaseOrders
+  - id: xero-accounting.updateOrCreatePurchaseOrders
     function_name: update_or_create
-  - id: updatePurchaseOrder
+  - id: xero-accounting.updatePurchaseOrder
     function_name: update
-- path: purchase_orders.attachments
+- path: accounting.purchase_orders.attachments
   operations:
-  - id: getPurchaseOrderAsPdf
+  - id: xero-accounting.getPurchaseOrderAsPdf
     function_name: get_as_pdf
-  - id: getPurchaseOrderAttachmentById
+  - id: xero-accounting.getPurchaseOrderAttachmentById
     function_name: get_by_id
-  - id: getPurchaseOrderAttachments
+  - id: xero-accounting.getPurchaseOrderAttachments
     function_name: list
-- path: purchase_orders.history
+- path: accounting.purchase_orders.history
   operations:
-  - id: createPurchaseOrderHistory
+  - id: xero-accounting.createPurchaseOrderHistory
     function_name: create_record
-  - id: getPurchaseOrderHistory
+  - id: xero-accounting.getPurchaseOrderHistory
     function_name: list
-- path: quotes
+- path: accounting.quotes
   operations:
-  - id: createQuotes
+  - id: xero-accounting.createQuotes
     function_name: create
-  - id: getQuote
+  - id: xero-accounting.getQuote
     function_name: get
-  - id: getQuoteAsPdf
+  - id: xero-accounting.getQuoteAsPdf
     function_name: get_as_pdf
-  - id: getQuotes
+  - id: xero-accounting.getQuotes
     function_name: list
-  - id: updateOrCreateQuotes
+  - id: xero-accounting.updateOrCreateQuotes
     function_name: update_or_create
-  - id: updateQuote
+  - id: xero-accounting.updateQuote
     function_name: update
-- path: quotes.attachments
+- path: accounting.quotes.attachments
   operations:
-  - id: getQuoteAttachmentById
+  - id: xero-accounting.getQuoteAttachmentById
     function_name: get_by_id
-  - id: getQuoteAttachments
+  - id: xero-accounting.getQuoteAttachments
     function_name: list
-- path: quotes.history
+- path: accounting.quotes.history
   operations:
-  - id: createQuoteHistory
+  - id: xero-accounting.createQuoteHistory
     function_name: create_record
-  - id: getQuoteHistory
+  - id: xero-accounting.getQuoteHistory
     function_name: list
-- path: receipts
+- path: accounting.receipts
   operations:
-  - id: createReceipt
+  - id: xero-accounting.createReceipt
     function_name: create
-  - id: getReceipt
+  - id: xero-accounting.getReceipt
     function_name: get
-  - id: getReceipts
+  - id: xero-accounting.getReceipts
     function_name: list
-  - id: updateReceipt
+  - id: xero-accounting.updateReceipt
     function_name: update
-- path: receipts.attachments
+- path: accounting.receipts.attachments
   operations:
-  - id: getReceiptAttachmentById
+  - id: xero-accounting.getReceiptAttachmentById
     function_name: get_by_id
-  - id: getReceiptAttachments
+  - id: xero-accounting.getReceiptAttachments
     function_name: list
-- path: receipts.history
+- path: accounting.receipts.history
   operations:
-  - id: createReceiptHistory
+  - id: xero-accounting.createReceiptHistory
     function_name: create_record
-  - id: getReceiptHistory
+  - id: xero-accounting.getReceiptHistory
     function_name: list
-- path: repeating_invoices
+- path: accounting.repeating_invoices
   operations:
-  - id: createRepeatingInvoices
+  - id: xero-accounting.createRepeatingInvoices
     function_name: create
-  - id: getRepeatingInvoice
+  - id: xero-accounting.getRepeatingInvoice
     function_name: get
-  - id: getRepeatingInvoices
+  - id: xero-accounting.getRepeatingInvoices
     function_name: list
-  - id: updateOrCreateRepeatingInvoices
+  - id: xero-accounting.updateOrCreateRepeatingInvoices
     function_name: update_or_create
-  - id: updateRepeatingInvoice
+  - id: xero-accounting.updateRepeatingInvoice
     function_name: update
-- path: repeating_invoices.attachments
+- path: accounting.repeating_invoices.attachments
   operations:
-  - id: getRepeatingInvoiceAttachmentById
+  - id: xero-accounting.getRepeatingInvoiceAttachmentById
     function_name: get_by_id
-  - id: getRepeatingInvoiceAttachments
+  - id: xero-accounting.getRepeatingInvoiceAttachments
     function_name: list
-- path: repeating_invoices.history
+- path: accounting.repeating_invoices.history
   operations:
-  - id: createRepeatingInvoiceHistory
+  - id: xero-accounting.createRepeatingInvoiceHistory
     function_name: create_record
-  - id: getRepeatingInvoiceHistory
+  - id: xero-accounting.getRepeatingInvoiceHistory
     function_name: list
-- path: reports
+- path: accounting.reports
   operations:
-  - id: getReportAgedPayablesByContact
+  - id: xero-accounting.getReportAgedPayablesByContact
     function_name: get_aged_payables_by_contact
-  - id: getReportAgedReceivablesByContact
+  - id: xero-accounting.getReportAgedReceivablesByContact
     function_name: get_aged_receivables_by_contact
-  - id: getReportBalanceSheet
+  - id: xero-accounting.getReportBalanceSheet
     function_name: get_balance_sheet
-  - id: getReportBankSummary
+  - id: xero-accounting.getReportBankSummary
     function_name: get_bank_summary
-  - id: getReportBudgetSummary
+  - id: xero-accounting.getReportBudgetSummary
     function_name: get_budget_summary
-  - id: getReportExecutiveSummary
+  - id: xero-accounting.getReportExecutiveSummary
     function_name: get_executive_summary
-  - id: getReportFromId
+  - id: xero-accounting.getReportFromId
     function_name: get
-  - id: getReportProfitAndLoss
+  - id: xero-accounting.getReportProfitAndLoss
     function_name: get_profit_and_loss
-  - id: getReportTenNinetyNine
+  - id: xero-accounting.getReportTenNinetyNine
     function_name: get_ten_ninety_nine
-  - id: getReportTrialBalance
+  - id: xero-accounting.getReportTrialBalance
     function_name: get_trial_balance
-  - id: getReportsList
+  - id: xero-accounting.getReportsList
     function_name: list
-- path: setup
+- path: accounting.setup
   operations:
-  - id: postSetup
+  - id: xero-accounting.postSetup
     function_name: create
-- path: tax_rates
+- path: accounting.tax_rates
   operations:
-  - id: createTaxRates
+  - id: xero-accounting.createTaxRates
     function_name: create
-  - id: getTaxRateByTaxType
+  - id: xero-accounting.getTaxRateByTaxType
     function_name: get
-  - id: getTaxRates
+  - id: xero-accounting.getTaxRates
     function_name: list
-  - id: updateTaxRate
+  - id: xero-accounting.updateTaxRate
     function_name: update
-- path: tracking_categories
+- path: accounting.tracking_categories
   operations:
-  - id: createTrackingCategory
+  - id: xero-accounting.createTrackingCategory
     function_name: create
-  - id: deleteTrackingCategory
+  - id: xero-accounting.deleteTrackingCategory
     function_name: delete
-  - id: getTrackingCategories
+  - id: xero-accounting.getTrackingCategories
     function_name: list
-  - id: getTrackingCategory
+  - id: xero-accounting.getTrackingCategory
     function_name: get
-  - id: updateTrackingCategory
+  - id: xero-accounting.updateTrackingCategory
     function_name: update
-- path: tracking_categories.options
+- path: accounting.tracking_categories.options
   operations:
-  - id: createTrackingOptions
+  - id: xero-accounting.createTrackingOptions
     function_name: create
-  - id: deleteTrackingOptions
+  - id: xero-accounting.deleteTrackingOptions
     function_name: delete
-  - id: updateTrackingOptions
+  - id: xero-accounting.updateTrackingOptions
     function_name: update
-- path: users
+- path: accounting.users
   operations:
-  - id: getUser
+  - id: xero-accounting.getUser
     function_name: get
-  - id: getUsers
+  - id: xero-accounting.getUsers
+    function_name: list
+- path: projects.projects
+  operations:
+  - id: xero-projects.createProject
+    function_name: create
+  - id: xero-projects.getProject
+    function_name: get
+  - id: xero-projects.getProjects
+    function_name: list
+  - id: xero-projects.patchProject
+    function_name: patch
+  - id: xero-projects.updateProject
+    function_name: update
+- path: projects.projects.tasks
+  operations:
+  - id: xero-projects.createTask
+    function_name: create
+  - id: xero-projects.deleteTask
+    function_name: delete
+  - id: xero-projects.getTask
+    function_name: get
+  - id: xero-projects.getTasks
+    function_name: list
+  - id: xero-projects.updateTask
+    function_name: update
+- path: projects.projects.time
+  operations:
+  - id: xero-projects.createTimeEntry
+    function_name: create
+  - id: xero-projects.deleteTimeEntry
+    function_name: delete
+  - id: xero-projects.getTimeEntries
+    function_name: list
+  - id: xero-projects.getTimeEntry
+    function_name: get
+  - id: xero-projects.updateTimeEntry
+    function_name: update
+- path: projects.projects_users
+  operations:
+  - id: xero-projects.getProjectUsers
     function_name: list

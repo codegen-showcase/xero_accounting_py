@@ -9,12 +9,24 @@ class Pagination(typing_extensions.TypedDict):
     """
 
     item_count: typing_extensions.NotRequired[int]
+    """
+    Number of items returned
+    """
 
     page: typing_extensions.NotRequired[int]
+    """
+    Set to 1 by default. The requested number of the page in paged response - Must be a number greater than 0.
+    """
 
     page_count: typing_extensions.NotRequired[int]
+    """
+    Number of pages available
+    """
 
     page_size: typing_extensions.NotRequired[int]
+    """
+    Optional, it is set to 50 by default. The number of items to return per page in a paged response - Must be a number between 1 and 500.
+    """
 
 
 class _SerializerPagination(pydantic.BaseModel):

@@ -5,6 +5,7 @@ from .accounts_receivable import AccountsReceivable, _SerializerAccountsReceivab
 from .address import Address, _SerializerAddress
 from .allocation import Allocation, _SerializerAllocation
 from .allocations import Allocations, _SerializerAllocations
+from .amount import Amount, _SerializerAmount
 from .attachment import Attachment, _SerializerAttachment
 from .balance_details import BalanceDetails, _SerializerBalanceDetails
 from .balances import Balances, _SerializerBalances
@@ -62,6 +63,11 @@ from .payment_term import PaymentTerm, _SerializerPaymentTerm
 from .payments import Payments, _SerializerPayments
 from .phone import Phone, _SerializerPhone
 from .prepayment import Prepayment, _SerializerPrepayment
+from .project_create_or_update import (
+    ProjectCreateOrUpdate,
+    _SerializerProjectCreateOrUpdate,
+)
+from .project_patch import ProjectPatch, _SerializerProjectPatch
 from .purchase import Purchase, _SerializerPurchase
 from .purchase_order import PurchaseOrder, _SerializerPurchaseOrder
 from .purchase_orders import PurchaseOrders, _SerializerPurchaseOrders
@@ -78,6 +84,7 @@ from .sales_tracking_category import (
 )
 from .schedule import Schedule, _SerializerSchedule
 from .setup import Setup, _SerializerSetup
+from .task_create_or_update import TaskCreateOrUpdate, _SerializerTaskCreateOrUpdate
 from .tax_breakdown_component import (
     TaxBreakdownComponent,
     _SerializerTaxBreakdownComponent,
@@ -85,6 +92,10 @@ from .tax_breakdown_component import (
 from .tax_component import TaxComponent, _SerializerTaxComponent
 from .tax_rate import TaxRate, _SerializerTaxRate
 from .tax_rates import TaxRates, _SerializerTaxRates
+from .time_entry_create_or_update import (
+    TimeEntryCreateOrUpdate,
+    _SerializerTimeEntryCreateOrUpdate,
+)
 from .tracking_category import TrackingCategory, _SerializerTrackingCategory
 from .tracking_option import TrackingOption, _SerializerTrackingOption
 from .user import User, _SerializerUser
@@ -99,6 +110,7 @@ __all__ = [
     "Address",
     "Allocation",
     "Allocations",
+    "Amount",
     "Attachment",
     "BalanceDetails",
     "Balances",
@@ -153,6 +165,8 @@ __all__ = [
     "Payments",
     "Phone",
     "Prepayment",
+    "ProjectCreateOrUpdate",
+    "ProjectPatch",
     "Purchase",
     "PurchaseOrder",
     "PurchaseOrders",
@@ -166,10 +180,12 @@ __all__ = [
     "SalesTrackingCategory",
     "Schedule",
     "Setup",
+    "TaskCreateOrUpdate",
     "TaxBreakdownComponent",
     "TaxComponent",
     "TaxRate",
     "TaxRates",
+    "TimeEntryCreateOrUpdate",
     "TrackingCategory",
     "TrackingOption",
     "User",
@@ -181,6 +197,7 @@ __all__ = [
     "_SerializerAddress",
     "_SerializerAllocation",
     "_SerializerAllocations",
+    "_SerializerAmount",
     "_SerializerAttachment",
     "_SerializerBalanceDetails",
     "_SerializerBalances",
@@ -235,6 +252,8 @@ __all__ = [
     "_SerializerPayments",
     "_SerializerPhone",
     "_SerializerPrepayment",
+    "_SerializerProjectCreateOrUpdate",
+    "_SerializerProjectPatch",
     "_SerializerPurchase",
     "_SerializerPurchaseOrder",
     "_SerializerPurchaseOrders",
@@ -248,10 +267,12 @@ __all__ = [
     "_SerializerSalesTrackingCategory",
     "_SerializerSchedule",
     "_SerializerSetup",
+    "_SerializerTaskCreateOrUpdate",
     "_SerializerTaxBreakdownComponent",
     "_SerializerTaxComponent",
     "_SerializerTaxRate",
     "_SerializerTaxRates",
+    "_SerializerTimeEntryCreateOrUpdate",
     "_SerializerTrackingCategory",
     "_SerializerTrackingOption",
     "_SerializerUser",
@@ -260,6 +281,7 @@ __all__ = [
 
 
 _types_namespace = {
+    "_SerializerProjectPatch": _SerializerProjectPatch,
     "_SerializerAccounts": _SerializerAccounts,
     "_SerializerAccount": _SerializerAccount,
     "_SerializerValidationError": _SerializerValidationError,
@@ -319,6 +341,10 @@ _types_namespace = {
     "_SerializerTrackingCategory": _SerializerTrackingCategory,
     "_SerializerTrackingOption": _SerializerTrackingOption,
     "_SerializerPaymentDelete": _SerializerPaymentDelete,
+    "_SerializerProjectCreateOrUpdate": _SerializerProjectCreateOrUpdate,
+    "_SerializerTaskCreateOrUpdate": _SerializerTaskCreateOrUpdate,
+    "_SerializerAmount": _SerializerAmount,
+    "_SerializerTimeEntryCreateOrUpdate": _SerializerTimeEntryCreateOrUpdate,
     "_SerializerPurchaseOrders": _SerializerPurchaseOrders,
     "_SerializerPurchaseOrder": _SerializerPurchaseOrder,
     "_SerializerQuotes": _SerializerQuotes,

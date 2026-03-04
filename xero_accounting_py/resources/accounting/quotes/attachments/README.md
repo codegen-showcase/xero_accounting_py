@@ -1,0 +1,95 @@
+# accounting.quotes.attachments
+
+## Module Functions
+
+### Retrieves attachments for a specific quote <a name="list"></a>
+
+**API Endpoint**: `GET /Quotes/{QuoteID}/Attachments`
+
+#### Parameters
+
+| Parameter        | Required | Description                    | Example                                  |
+| ---------------- | :------: | ------------------------------ | ---------------------------------------- |
+| `quote_id`       |    ✓     | Unique identifier for an Quote | `"00000000-0000-0000-0000-000000000000"` |
+| `xero_tenant_id` |    ✓     | Xero identifier for Tenant     | `"YOUR_XERO_TENANT_ID"`                  |
+
+#### Synchronous Client
+
+```python
+from os import getenv
+from xero_accounting_py import Client
+
+client = Client(oauth_token=getenv("API_TOKEN"))
+res = client.accounting.quotes.attachments.list(
+    quote_id="00000000-0000-0000-0000-000000000000",
+    xero_tenant_id="YOUR_XERO_TENANT_ID",
+)
+```
+
+#### Asynchronous Client
+
+```python
+from os import getenv
+from xero_accounting_py import AsyncClient
+
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
+res = await client.accounting.quotes.attachments.list(
+    quote_id="00000000-0000-0000-0000-000000000000",
+    xero_tenant_id="YOUR_XERO_TENANT_ID",
+)
+```
+
+#### Response
+
+##### Type
+
+[Attachments](/xero_accounting_py/types/models/attachments.py)
+
+##### Example
+
+```python
+{}
+```
+
+### Retrieves a specific attachment from a specific quote using a unique attachment Id <a name="get_by_id"></a>
+
+**API Endpoint**: `GET /Quotes/{QuoteID}/Attachments/{AttachmentID}`
+
+#### Parameters
+
+| Parameter        | Required | Description                                                                            | Example                                  |
+| ---------------- | :------: | -------------------------------------------------------------------------------------- | ---------------------------------------- |
+| `attachment_id`  |    ✓     | Unique identifier for Attachment object                                                | `"00000000-0000-0000-0000-000000000000"` |
+| `content_type`   |    ✓     | The mime type of the attachment file you are retrieving i.e image/jpg, application/pdf | `"image/jpg"`                            |
+| `quote_id`       |    ✓     | Unique identifier for an Quote                                                         | `"00000000-0000-0000-0000-000000000000"` |
+| `xero_tenant_id` |    ✓     | Xero identifier for Tenant                                                             | `"YOUR_XERO_TENANT_ID"`                  |
+
+#### Synchronous Client
+
+```python
+from os import getenv
+from xero_accounting_py import Client
+
+client = Client(oauth_token=getenv("API_TOKEN"))
+res = client.accounting.quotes.attachments.get_by_id(
+    attachment_id="00000000-0000-0000-0000-000000000000",
+    content_type="image/jpg",
+    quote_id="00000000-0000-0000-0000-000000000000",
+    xero_tenant_id="YOUR_XERO_TENANT_ID",
+)
+```
+
+#### Asynchronous Client
+
+```python
+from os import getenv
+from xero_accounting_py import AsyncClient
+
+client = AsyncClient(oauth_token=getenv("API_TOKEN"))
+res = await client.accounting.quotes.attachments.get_by_id(
+    attachment_id="00000000-0000-0000-0000-000000000000",
+    content_type="image/jpg",
+    quote_id="00000000-0000-0000-0000-000000000000",
+    xero_tenant_id="YOUR_XERO_TENANT_ID",
+)
+```

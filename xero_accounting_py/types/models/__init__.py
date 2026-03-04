@@ -8,6 +8,7 @@ from .address import Address
 from .address_for_organisation import AddressForOrganisation
 from .allocation import Allocation
 from .allocations import Allocations
+from .amount import Amount
 from .attachment import Attachment
 from .attachments import Attachments
 from .balances import Balances
@@ -82,6 +83,10 @@ from .payments import Payments
 from .phone import Phone
 from .prepayment import Prepayment
 from .prepayments import Prepayments
+from .project import Project
+from .project_user import ProjectUser
+from .project_users import ProjectUsers
+from .projects import Projects
 from .purchase import Purchase
 from .purchase_order import PurchaseOrder
 from .purchase_orders import PurchaseOrders
@@ -102,11 +107,15 @@ from .report_with_rows import ReportWithRows
 from .reports import Reports
 from .sales_tracking_category import SalesTrackingCategory
 from .schedule import Schedule
+from .task import Task
+from .tasks import Tasks
 from .tax_breakdown_component import TaxBreakdownComponent
 from .tax_component import TaxComponent
 from .tax_rate import TaxRate
 from .tax_rates import TaxRates
 from .ten_ninety_nine_contact import TenNinetyNineContact
+from .time_entries import TimeEntries
+from .time_entry import TimeEntry
 from .tracking_categories import TrackingCategories
 from .tracking_category import TrackingCategory
 from .tracking_option import TrackingOption
@@ -127,6 +136,7 @@ __all__ = [
     "AddressForOrganisation",
     "Allocation",
     "Allocations",
+    "Amount",
     "Attachment",
     "Attachments",
     "Balances",
@@ -201,6 +211,10 @@ __all__ = [
     "Phone",
     "Prepayment",
     "Prepayments",
+    "Project",
+    "ProjectUser",
+    "ProjectUsers",
+    "Projects",
     "Purchase",
     "PurchaseOrder",
     "PurchaseOrders",
@@ -221,11 +235,15 @@ __all__ = [
     "Reports",
     "SalesTrackingCategory",
     "Schedule",
+    "Task",
+    "Tasks",
     "TaxBreakdownComponent",
     "TaxComponent",
     "TaxRate",
     "TaxRates",
     "TenNinetyNineContact",
+    "TimeEntries",
+    "TimeEntry",
     "TrackingCategories",
     "TrackingCategory",
     "TrackingOption",
@@ -326,6 +344,15 @@ _types_namespace = {
     "Overpayments": Overpayments,
     "Payments": Payments,
     "Prepayments": Prepayments,
+    "Projects": Projects,
+    "Project": Project,
+    "Amount": Amount,
+    "Tasks": Tasks,
+    "Task": Task,
+    "TimeEntries": TimeEntries,
+    "TimeEntry": TimeEntry,
+    "ProjectUsers": ProjectUsers,
+    "ProjectUser": ProjectUser,
     "PurchaseOrders": PurchaseOrders,
     "PurchaseOrder": PurchaseOrder,
     "Quotes": Quotes,
