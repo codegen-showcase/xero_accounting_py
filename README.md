@@ -1,6 +1,6 @@
-# Xero Accounting API - Python
+# Xero: Accounting + Projects APIs - Python
 
-xero-accounting (10.0.0)
+This README can be edited between codegens. The "Module Documentation and Snippets" section stays up to date automatically even when you edit this file.
 
 ## Getting Started
 
@@ -41,8 +41,6 @@ poetry install
 ```
 
 2. Run Tests
-
-> A number of tests are failing due to invalid examples in `accounting.yml` see the lint report (`accounting-lint-report.csv`) for details.
 
 ```bash
 poetry run pytests
